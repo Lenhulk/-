@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "LTTabBarController.h"
+
+
 
 @interface AppDelegate ()
 
@@ -16,7 +19,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    LTTabBarController *tabBarVc = [[LTTabBarController alloc] init];
+    self.window.rootViewController = tabBarVc;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -42,4 +52,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    //1清空图片缓存 SDWebImage
+    
+    //2NSCache
+}
 @end

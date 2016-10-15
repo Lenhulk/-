@@ -13,6 +13,12 @@
 		E94E200B1DB23E9D00E23BE0 /* BuDeJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E200A1DB23E9D00E23BE0 /* BuDeJieUITests.m */; };
 		E94E20751DB2573700E23BE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E205A1DB2573700E23BE0 /* AppDelegate.m */; };
 		E94E20761DB2573700E23BE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E20701DB2573700E23BE0 /* main.m */; };
+		E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E207A1DB25C9500E23BE0 /* LTEssenceViewController.m */; };
+		E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E207D1DB25CAE00E23BE0 /* LTFriendTrendViewController.m */; };
+		E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E20801DB25CD300E23BE0 /* LTTabBarController.m */; };
+		E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E20861DB25D3300E23BE0 /* LTMeViewController.m */; };
+		E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E20891DB25D5A00E23BE0 /* LTNewViewController.m */; };
+		E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E208C1DB25D6F00E23BE0 /* LTPublishViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,18 @@
 		E94E20591DB2573700E23BE0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E94E205A1DB2573700E23BE0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E94E20701DB2573700E23BE0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E94E20791DB25C9500E23BE0 /* LTEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTEssenceViewController.h; sourceTree = "<group>"; };
+		E94E207A1DB25C9500E23BE0 /* LTEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTEssenceViewController.m; sourceTree = "<group>"; };
+		E94E207C1DB25CAE00E23BE0 /* LTFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTFriendTrendViewController.h; sourceTree = "<group>"; };
+		E94E207D1DB25CAE00E23BE0 /* LTFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTFriendTrendViewController.m; sourceTree = "<group>"; };
+		E94E207F1DB25CD300E23BE0 /* LTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTabBarController.h; sourceTree = "<group>"; };
+		E94E20801DB25CD300E23BE0 /* LTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTabBarController.m; sourceTree = "<group>"; };
+		E94E20851DB25D3300E23BE0 /* LTMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMeViewController.h; sourceTree = "<group>"; };
+		E94E20861DB25D3300E23BE0 /* LTMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMeViewController.m; sourceTree = "<group>"; };
+		E94E20881DB25D5A00E23BE0 /* LTNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTNewViewController.h; sourceTree = "<group>"; };
+		E94E20891DB25D5A00E23BE0 /* LTNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNewViewController.m; sourceTree = "<group>"; };
+		E94E208B1DB25D6F00E23BE0 /* LTPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPublishViewController.h; sourceTree = "<group>"; };
+		E94E208C1DB25D6F00E23BE0 /* LTPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPublishViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +152,9 @@
 			isa = PBXGroup;
 			children = (
 				E94E20581DB2573700E23BE0 /* AppDelegate */,
+				E94E20631DB2573700E23BE0 /* Main(主要) */,
 				E94E205B1DB2573700E23BE0 /* Essence(精华) */,
 				E94E205F1DB2573700E23BE0 /* FriendTrend(关注) */,
-				E94E20631DB2573700E23BE0 /* Main(主要) */,
 				E94E20671DB2573700E23BE0 /* Me(我) */,
 				E94E206B1DB2573700E23BE0 /* New(新帖) */,
 				E94E20711DB2573700E23BE0 /* Publish(发布) */,
@@ -167,6 +185,8 @@
 		E94E205C1DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E20791DB25C9500E23BE0 /* LTEssenceViewController.h */,
+				E94E207A1DB25C9500E23BE0 /* LTEssenceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,6 +218,8 @@
 		E94E20601DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E207C1DB25CAE00E23BE0 /* LTFriendTrendViewController.h */,
+				E94E207D1DB25CAE00E23BE0 /* LTFriendTrendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -229,6 +251,8 @@
 		E94E20641DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E207F1DB25CD300E23BE0 /* LTTabBarController.h */,
+				E94E20801DB25CD300E23BE0 /* LTTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +284,8 @@
 		E94E20681DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E20851DB25D3300E23BE0 /* LTMeViewController.h */,
+				E94E20861DB25D3300E23BE0 /* LTMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +317,8 @@
 		E94E206C1DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E20881DB25D5A00E23BE0 /* LTNewViewController.h */,
+				E94E20891DB25D5A00E23BE0 /* LTNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +358,8 @@
 		E94E20721DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E94E208B1DB25D6F00E23BE0 /* LTPublishViewController.h */,
+				E94E208C1DB25D6F00E23BE0 /* LTPublishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -410,6 +440,7 @@
 		E94E1FDA1DB23E9D00E23BE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LT;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Lenhulk;
 				TargetAttributes = {
@@ -477,7 +508,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */,
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
+				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
+				E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */,
+				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
+				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
+				E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */,
 				E94E20751DB2573700E23BE0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +650,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,7 +664,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
