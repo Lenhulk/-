@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */ = {isa = PBXBuildFile; fileRef = E90960D11DB39A980068E79D /* UIImage+LTRender.m */; };
 		E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */; };
 		E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF31DB23E9D00E23BE0 /* LaunchScreen.storyboard */; };
 		E94E20001DB23E9D00E23BE0 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E1FFF1DB23E9D00E23BE0 /* BuDeJieTests.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90960D01DB39A980068E79D /* UIImage+LTRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LTRender.h"; sourceTree = "<group>"; };
+		E90960D11DB39A980068E79D /* UIImage+LTRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LTRender.m"; sourceTree = "<group>"; };
 		E94E1FE21DB23E9D00E23BE0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94E1FF41DB23E9D00E23BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90960CF1DB39A6B0068E79D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E90960D01DB39A980068E79D /* UIImage+LTRender.h */,
+				E90960D11DB39A980068E79D /* UIImage+LTRender.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		E94E1FD91DB23E9D00E23BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +352,7 @@
 		E94E206F1DB2573700E23BE0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E90960CF1DB39A6B0068E79D /* Category */,
 				E94E20701DB2573700E23BE0 /* main.m */,
 			);
 			path = Other;
@@ -512,6 +525,7 @@
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
 				E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */,
+				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
 				E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */,
