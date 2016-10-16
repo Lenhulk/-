@@ -21,6 +21,7 @@
 		E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E20891DB25D5A00E23BE0 /* LTNewViewController.m */; };
 		E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E208C1DB25D6F00E23BE0 /* LTPublishViewController.m */; };
 		E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E95F6D391DB3A5D900D3A77A /* UITabBarItem+LTFont.m */; };
+		E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		E94E208C1DB25D6F00E23BE0 /* LTPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPublishViewController.m; sourceTree = "<group>"; };
 		E95F6D381DB3A5D900D3A77A /* UITabBarItem+LTFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+LTFont.h"; sourceTree = "<group>"; };
 		E95F6D391DB3A5D900D3A77A /* UITabBarItem+LTFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+LTFont.m"; sourceTree = "<group>"; };
+		E9B6C7931DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LTItem.h"; sourceTree = "<group>"; };
+		E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LTItem.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				E90960D11DB39A980068E79D /* UIImage+LTRender.m */,
 				E95F6D381DB3A5D900D3A77A /* UITabBarItem+LTFont.h */,
 				E95F6D391DB3A5D900D3A77A /* UITabBarItem+LTFont.m */,
+				E9B6C7931DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.h */,
+				E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
+				E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */,
 				E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
