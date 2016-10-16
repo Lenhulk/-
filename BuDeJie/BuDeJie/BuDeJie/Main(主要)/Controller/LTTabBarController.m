@@ -13,6 +13,7 @@
 #import "LTPublishViewController.h"
 #import "LTFriendTrendViewController.h"
 #import "UIImage+LTRender.h"
+#import "UITabBarItem+LTFont.h"
 
 @interface LTTabBarController ()
 
@@ -22,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tabBar.tintColor = [UIColor darkGrayColor];
     [self addAllChildViewController];
     
 }
@@ -58,6 +61,10 @@
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = image;
     nav.tabBarItem.selectedImage = selImage;
+    [nav.tabBarItem setupTabBarButtonFont:12];
+    
+    //设置TabBar按钮的文字大小属性
+//    [nav.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]} forState:UIControlStateNormal];
     //设置按钮被选中时不会被渲染成默认的蓝色(原始图片样式)
 //    nav.tabBarItem.selectedImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
