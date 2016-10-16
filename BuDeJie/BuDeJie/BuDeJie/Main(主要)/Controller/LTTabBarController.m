@@ -21,6 +21,19 @@
 
 @implementation LTTabBarController
 
++ (void)load{
+    //如果通过appearance设置属性，必须要在控件显示之前设置，可放在load方法中
+    
+    //获取UITabBarItem的外观
+    UITabBarItem *item = [UITabBarItem appearance];
+//    NSLog(@"%@", [item class]);
+//    [item setupTabBarButtonFont:12];//appearance不可直接作为UITabBarItem，调用方法导致程序崩溃，因为item真实类型是UIBarItemAppearance
+    
+    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
+    attr[NSFontAttributeName] = [UIFont systemFontOfSize:12];
+    [item setTitleTextAttributes:attr forState:UIControlStateNormal];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -61,10 +74,13 @@
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = image;
     nav.tabBarItem.selectedImage = selImage;
-    [nav.tabBarItem setupTabBarButtonFont:12];
     
-    //设置TabBar按钮的文字大小属性
+    //1设置TabBar按钮的文字大小属性
 //    [nav.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:20]} forState:UIControlStateNormal];
+    //2抽成分类通过导入头文件UITabBarItem+LTFont设置
+    //3每次创建都要设置  可否只设置一次？（考虑使用appearance统一设置）
+    //    [nav.tabBarItem setupTabBarButtonFont:12];
+    
     //设置按钮被选中时不会被渲染成默认的蓝色(原始图片样式)
 //    nav.tabBarItem.selectedImage = [selImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
