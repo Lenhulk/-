@@ -7,6 +7,7 @@
 //
 
 #import "LTNewViewController.h"
+#import "UIBarButtonItem+LTItem.h"
 
 @interface LTNewViewController ()
 
@@ -16,14 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavBar];
     self.view.backgroundColor = [UIColor greenColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNavBar{
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] hightLightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(subClick)];
 }
 
+- (void)subClick{
+    NSLog(@"订阅标签");
+}
 /*
 #pragma mark - Navigation
 
