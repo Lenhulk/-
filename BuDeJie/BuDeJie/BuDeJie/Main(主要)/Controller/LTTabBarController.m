@@ -37,6 +37,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //创建加号按钮
+    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
+    [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+    [addBtn sizeToFit];     //重要不能忘记，且应该放在坐标位置设置语句之前
+    addBtn.center = CGPointMake(self.tabBar.bounds.size.width * 0.5, self.tabBar.bounds.size.height * 0.5);
+    [self.tabBar addSubview:addBtn];
+    
     self.tabBar.tintColor = [UIColor darkGrayColor];
     [self addAllChildViewController];
     
@@ -54,8 +62,9 @@
     
     //发布
     LTPublishViewController *publishVc = [[LTPublishViewController alloc] init];
-    publishVc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon"];
-    publishVc.tabBarItem.selectedImage = [UIImage imageNamedWithOriginalMode:@"tabBar_publish_click_icon"];
+    //实现百思的按钮，自己创建设置（从而可设置进入按钮对应界面按钮只在点击时高亮）
+//    publishVc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon"];
+//    publishVc.tabBarItem.selectedImage = [UIImage imageNamedWithOriginalMode:@"tabBar_publish_click_icon"];
     [self addChildViewController:publishVc];
     
     //关注
