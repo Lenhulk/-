@@ -16,10 +16,23 @@
 #import "UITabBarItem+LTFont.h"
 
 @interface LTTabBarController ()
-
+@property (nonatomic, weak) UIButton *plusButton;
 @end
 
 @implementation LTTabBarController
+
+- (UIButton *)plusButton{
+    if (_plusButton == nil) {
+        //创建加号按钮
+        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
+        [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [addBtn sizeToFit];     //重要不能忘记，且应该放在坐标位置设置语句之前
+        [self.tabBar addSubview:addBtn];
+        _plusButton = addBtn;
+    }
+    return _plusButton;
+}
 
 + (void)load{
     //如果通过appearance设置属性，必须要在控件显示之前设置，可放在load方法中
@@ -37,13 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //创建加号按钮
-    UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
-    [addBtn setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
-    [addBtn sizeToFit];     //重要不能忘记，且应该放在坐标位置设置语句之前
-    addBtn.center = CGPointMake(self.tabBar.bounds.size.width * 0.5, self.tabBar.bounds.size.height * 0.5);
-    [self.tabBar addSubview:addBtn];
+    //创建发布按钮
+    self.plusButton.center = CGPointMake(self.tabBar.bounds.size.width * 0.5, self.tabBar.bounds.size.height * 0.5);
     
     self.tabBar.tintColor = [UIColor darkGrayColor];
     [self addAllChildViewController];
@@ -62,9 +70,10 @@
     
     //发布
     LTPublishViewController *publishVc = [[LTPublishViewController alloc] init];
-    //实现百思的按钮，自己创建设置（从而可设置进入按钮对应界面按钮只在点击时高亮）
+    //实现百思的按钮，自己创建（从而可设置进入按钮对应界面按钮只在点击时高亮）
 //    publishVc.tabBarItem.image = [UIImage imageNamed:@"tabBar_publish_icon"];
 //    publishVc.tabBarItem.selectedImage = [UIImage imageNamedWithOriginalMode:@"tabBar_publish_click_icon"];
+    publishVc.tabBarItem.enabled = NO;  //设置TarBar按钮不接收点击事件
     [self addChildViewController:publishVc];
     
     //关注
