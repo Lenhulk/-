@@ -14,6 +14,7 @@
 #import "LTFriendTrendViewController.h"
 #import "UIImage+LTRender.h"
 #import "UITabBarItem+LTFont.h"
+#import "LTNavigationController.h"
 
 @interface LTTabBarController ()
 @property (nonatomic, weak) UIButton *plusButton;
@@ -88,7 +89,7 @@
 - (void)setNavVc:(UIViewController *)ChildVc image:(UIImage *)image selectedImage:(UIImage *)selImage title:(NSString *)title{
     
     //设置子导航控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:ChildVc];
+    LTNavigationController *nav = [[LTNavigationController alloc] initWithRootViewController:ChildVc];
     nav.tabBarItem.title = title;
     nav.tabBarItem.image = image;
     nav.tabBarItem.selectedImage = selImage;
