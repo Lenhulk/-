@@ -23,6 +23,8 @@
 		E95EECAC1DB468A400B2A505 /* LTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EECAB1DB468A400B2A505 /* LTNavigationController.m */; };
 		E95EECB31DB46B4A00B2A505 /* LTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EECB21DB46B4A00B2A505 /* LTSettingViewController.m */; };
 		E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EECB51DB4701D00B2A505 /* UIView+LTFrame.m */; };
+		E95EECB91DB4743500B2A505 /* LTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EECB81DB4743500B2A505 /* LTNavigationBar.m */; };
+		E95EECBC1DB4744A00B2A505 /* LTBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = E95EECBB1DB4744A00B2A505 /* LTBackView.m */; };
 		E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E95F6D391DB3A5D900D3A77A /* UITabBarItem+LTFont.m */; };
 		E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,10 @@
 		E95EECB21DB46B4A00B2A505 /* LTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSettingViewController.m; sourceTree = "<group>"; };
 		E95EECB41DB4701D00B2A505 /* UIView+LTFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LTFrame.h"; sourceTree = "<group>"; };
 		E95EECB51DB4701D00B2A505 /* UIView+LTFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LTFrame.m"; sourceTree = "<group>"; };
+		E95EECB71DB4743500B2A505 /* LTNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTNavigationBar.h; sourceTree = "<group>"; };
+		E95EECB81DB4743500B2A505 /* LTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTNavigationBar.m; sourceTree = "<group>"; };
+		E95EECBA1DB4744A00B2A505 /* LTBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTBackView.h; sourceTree = "<group>"; };
+		E95EECBB1DB4744A00B2A505 /* LTBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTBackView.m; sourceTree = "<group>"; };
 		E95F6D381DB3A5D900D3A77A /* UITabBarItem+LTFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+LTFont.h"; sourceTree = "<group>"; };
 		E95F6D391DB3A5D900D3A77A /* UITabBarItem+LTFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+LTFont.m"; sourceTree = "<group>"; };
 		E9B6C7931DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LTItem.h"; sourceTree = "<group>"; };
@@ -304,6 +310,10 @@
 		E94E20661DB2573700E23BE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E95EECB71DB4743500B2A505 /* LTNavigationBar.h */,
+				E95EECB81DB4743500B2A505 /* LTNavigationBar.m */,
+				E95EECBA1DB4744A00B2A505 /* LTBackView.h */,
+				E95EECBB1DB4744A00B2A505 /* LTBackView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,8 +590,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95EECB91DB4743500B2A505 /* LTNavigationBar.m in Sources */,
 				E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */,
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
+				E95EECBC1DB4744A00B2A505 /* LTBackView.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "LTSettingViewController.h"
+#import "LTBackView.h"
 
 @interface LTSettingViewController ()
 
@@ -17,26 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //设置按钮
-    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-    [backBtn sizeToFit];
-    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    LTBackView *backView = [LTBackView backViewWithImage:[UIImage imageNamed:@"navigationButtonReturn"] highLightedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
     
-    //设置导航条左边按钮左偏
-    //发现问题，按钮的frame可以改变，但是包装的view位置并不移动（即可点击部位仍处于默认位置）
-    backBtn.lh_x -= 11;
-    
-    //用view将按钮包装起来（减少点击范围）
-    UIView *view = [[UIView alloc] initWithFrame:backBtn.bounds];
-    view.backgroundColor = [UIColor greenColor];
-    [view addSubview:backBtn];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:view];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
 }
 
 - (void)back{

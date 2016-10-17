@@ -7,6 +7,7 @@
 //
 
 #import "LTNavigationController.h"
+#import "LTNavigationBar.h"
 
 @interface LTNavigationController ()
 
@@ -29,7 +30,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    //创建自定义导航条
+    LTNavigationBar *bar = [[LTNavigationBar alloc] initWithFrame:self.navigationBar.frame];
+    //导航条控件是只读控件（没有setter方法），通过KVC设置替换
+//    self.navigationBar = bar;
+    [self setValue:bar forKey:@"navigationBar"];
+    
 }
 
 
