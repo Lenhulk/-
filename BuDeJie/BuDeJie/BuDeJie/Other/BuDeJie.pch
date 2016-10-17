@@ -15,5 +15,6 @@
 #endif
 
 #import "UIBarButtonItem+LTItem.h"
+#import "UIView+LTFrame.h"
 
 #endif
