@@ -1,0 +1,19 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by Lenhulk on 16/10/17.
+//  Copyright © 2016年 Lenhulk. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define LTLog(...) NSLog(__VA_ARGS__)
+#else
+#define LTLog(...)
+#endif
+
+#import "UIBarButtonItem+LTItem.h"
+
+#endif

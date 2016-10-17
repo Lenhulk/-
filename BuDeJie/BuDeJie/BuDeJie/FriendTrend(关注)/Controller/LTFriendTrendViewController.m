@@ -7,7 +7,6 @@
 //
 
 #import "LTFriendTrendViewController.h"
-#import "UIBarButtonItem+LTItem.h"
 @interface LTFriendTrendViewController ()
 @end
 
@@ -24,7 +23,7 @@
 }
 
 - (void)attentionClick{
-    NSLog(@"点击关注");
+    LTLog(@"点击关注");
 }
 
 - (void)didReceiveMemoryWarning {

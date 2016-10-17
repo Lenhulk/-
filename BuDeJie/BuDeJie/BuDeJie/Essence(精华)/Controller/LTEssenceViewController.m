@@ -7,7 +7,6 @@
 //
 
 #import "LTEssenceViewController.h"
-#import "UIBarButtonItem+LTItem.h"
 
 @interface LTEssenceViewController ()
 
@@ -29,11 +28,11 @@
 }
 
 - (void)gameClick{
-    NSLog(@"点击🎮游戏");
+    LTLog(@"点击🎮游戏");
 }
 
 - (void)randomClick{
-    NSLog(@"随机推荐");
+    LTLog(@"随机推荐");
 }
 
 

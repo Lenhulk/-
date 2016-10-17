@@ -7,7 +7,6 @@
 //
 
 #import "LTNewViewController.h"
-#import "UIBarButtonItem+LTItem.h"
 
 @interface LTNewViewController ()
 
@@ -27,7 +26,7 @@
 }
 
 - (void)subClick{
-    NSLog(@"订阅标签");
+    LTLog(@"订阅标签");
 }
 /*
 #pragma mark - Navigation

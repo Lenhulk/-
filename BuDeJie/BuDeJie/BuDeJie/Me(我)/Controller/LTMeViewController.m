@@ -7,7 +7,6 @@
 //
 
 #import "LTMeViewController.h"
-#import "UIBarButtonItem+LTItem.h"
 
 @interface LTMeViewController ()
 
@@ -37,7 +36,7 @@
 }
 
 - (void)settingClick{
-    NSLog(@"进入设置");
+    LTLog(@"进入设置");
 }
 
 #pragma mark - Table view data source
