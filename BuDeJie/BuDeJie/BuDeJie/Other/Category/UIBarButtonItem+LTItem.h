@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (LTItem)
+//高亮按钮
 + (instancetype)itemWithImage:(UIImage *)image hightLightImage:(UIImage *)hightImage target:(id)target action:(SEL)action;
+//选择按钮
++ (instancetype)itemWithImage:(UIImage *)image selectedImage:(UIImage *)selImage target:(id)target action:(SEL)action;
 @end

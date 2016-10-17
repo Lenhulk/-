@@ -7,16 +7,24 @@
 //
 
 #import "LTFriendTrendViewController.h"
-
+#import "UIBarButtonItem+LTItem.h"
 @interface LTFriendTrendViewController ()
-
 @end
 
 @implementation LTFriendTrendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.view.backgroundColor = [UIColor orangeColor];
+
+    self.navigationItem.title = @"我的关注";
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] hightLightImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(attentionClick)];
+}
+
+- (void)attentionClick{
+    NSLog(@"点击关注");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,7 @@
 //
 
 #import "LTMeViewController.h"
+#import "UIBarButtonItem+LTItem.h"
 
 @interface LTMeViewController ()
 
@@ -17,17 +18,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor yellowColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupNavBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupNavBar{
+    self.navigationItem.title = @"我";
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    UIBarButtonItem *nightMode = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] selectedImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(nightClick:)];
+    
+    UIBarButtonItem *setting = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] hightLightImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(settingClick)];
+    
+    self.navigationItem.rightBarButtonItems = @[setting, nightMode];
+}
+
+- (void)nightClick:(UIButton *)btn{
+    btn.selected = !btn.selected;
+}
+
+- (void)settingClick{
+    NSLog(@"进入设置");
 }
 
 #pragma mark - Table view data source
