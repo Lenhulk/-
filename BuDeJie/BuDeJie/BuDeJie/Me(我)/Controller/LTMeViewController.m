@@ -37,6 +37,7 @@
 }
 
 - (void)settingClick{
+    
     LTSettingViewController *settingVc = [[LTSettingViewController alloc] init];
     settingVc.hidesBottomBarWhenPushed = YES;   //设置隐藏底部TabBar
     [self.navigationController pushViewController:settingVc animated:YES];

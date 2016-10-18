@@ -7,7 +7,6 @@
 //
 
 #import "LTSettingViewController.h"
-#import "LTBackView.h"
 
 @interface LTSettingViewController ()
 
@@ -18,14 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LTBackView *backView = [LTBackView backViewWithImage:[UIImage imageNamed:@"navigationButtonReturn"] highLightedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
+ 
 }
 
-- (void)back{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
