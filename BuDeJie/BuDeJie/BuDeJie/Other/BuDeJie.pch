@@ -16,5 +16,6 @@
 
 #import "UIBarButtonItem+LTItem.h"
 #import "UIView+LTFrame.h"
+#import "AFHTTPSessionManager+LTManager.h"
 
 #endif

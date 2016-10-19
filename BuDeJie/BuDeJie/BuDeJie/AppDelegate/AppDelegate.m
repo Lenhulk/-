@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LTTabBarController.h"
+#import "LTADViewController.h"
 
 
 
@@ -22,8 +23,11 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    LTTabBarController *tabBarVc = [[LTTabBarController alloc] init];
-    self.window.rootViewController = tabBarVc;
+//    LTTabBarController *tabBarVc = [[LTTabBarController alloc] init];
+//    self.window.rootViewController = tabBarVc;
+    
+    LTADViewController *adVc = [[LTADViewController alloc] init];
+    self.window.rootViewController = adVc;
     
     [self.window makeKeyAndVisible];
     
