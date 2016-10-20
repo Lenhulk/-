@@ -7,6 +7,8 @@
 //
 
 #import "LTNewViewController.h"
+#import "LTSubTagViewController.h"
+
 
 @interface LTNewViewController ()
 
@@ -16,8 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
+    
     self.view.backgroundColor = [UIColor greenColor];
+    [self setupNavBar];
+    
 }
 
 - (void)setupNavBar{
@@ -25,8 +29,10 @@
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"MainTagSubIcon"] hightLightImage:[UIImage imageNamed:@"MainTagSubIconClick"] target:self action:@selector(subClick)];
 }
 
+//点击订阅
 - (void)subClick{
-    LTLog(@"订阅标签");
+    LTSubTagViewController *subTagVc = [[LTSubTagViewController alloc] init];
+    [self.navigationController pushViewController:subTagVc animated:YES];
 }
 /*
 #pragma mark - Navigation

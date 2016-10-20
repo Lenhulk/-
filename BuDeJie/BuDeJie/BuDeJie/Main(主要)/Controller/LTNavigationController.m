@@ -27,7 +27,6 @@
     
     //导航条背景
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    
 }
 
 - (void)viewDidLoad {
@@ -65,13 +64,12 @@
     if (self.childViewControllers.count > 0) {
         LTBackView *backView = [LTBackView backViewWithImage:[UIImage imageNamed:@"navigationButtonReturn"] highLightedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] target:self action:@selector(back) title:@"返回"];
         
-        //    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
         
         viewController.hidesBottomBarWhenPushed = YES;  // 隐藏底部条
         
         //打印页面的手势滑动信息
-        LTLog(@"%@", self.interactivePopGestureRecognizer);
+//        LTLog(@"%@", self.interactivePopGestureRecognizer);
     }
     
     //在父类做事(真正的push)之前创建"返回"按钮

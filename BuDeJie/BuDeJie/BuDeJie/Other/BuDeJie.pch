@@ -8,14 +8,19 @@
 
 #ifdef __OBJC__
 
+#import "UIBarButtonItem+LTItem.h"
+#import "UIView+LTFrame.h"
+#import "AFHTTPSessionManager+LTManager.h"
+
+#define KBaseURL @"http://api.budejie.com/api/api_open.php"
+
+
 #ifdef DEBUG
 #define LTLog(...) NSLog(__VA_ARGS__)
 #else
 #define LTLog(...)
 #endif
 
-#import "UIBarButtonItem+LTItem.h"
-#import "UIView+LTFrame.h"
-#import "AFHTTPSessionManager+LTManager.h"
+
 
 #endif
