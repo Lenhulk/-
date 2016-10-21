@@ -10,9 +10,13 @@
 #import "LTSubTagItem.h"
 #import "LTTagCell.h"
 #import <MJExtension/MJExtension.h>
+#import <SVProgressHUD.h>
+
+#define SystemVersion [[UIDevice currentDevice].systemVersion floatValue]
 
 @interface LTSubTagViewController ()
 @property (nonatomic, strong) NSArray *tags;
+@property (nonatomic, weak) AFHTTPSessionManager *sessionMgr;
 @end
 
 static NSString *const ID = @"cell1";
@@ -27,31 +31,56 @@ static NSString *const ID = @"cell1";
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"LTTagCell" bundle:nil] forCellReuseIdentifier:ID];
+    
+//    self.tableView.separatorInset = UIEdgeInsetsZero;
+    
+    //取消系统分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // 设置tableView背景色
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)loadData{
+    [SVProgressHUD showWithStatus:@"正在以吃翔的力气加载数据..."];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    _sessionMgr = manager;
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"tag_recommend";
     parameters[@"c"] = @"topic";
     parameters[@"action"] = @"sub";
     
-    [manager GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
-        
-//        LTLog(@"%@", responseObject);
-//        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/sub.plist" atomically:YES];
-        
-        //通过查看数据可知responseObject原来是数组类型，直接在上面参数中修改为NSArray
-        _tags = [LTSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
-        
-        //刷新表格
-        [self.tableView reloadData];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        LTLog(@"%@", error);
-    }];
+    //模拟网络延迟
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
     
+        [manager GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
+            //        LTLog(@"%@", responseObject);
+            //        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/sub.plist" atomically:YES];
+            [SVProgressHUD dismiss];
+            
+            //通过查看数据可知responseObject原来是数组类型，直接在上面参数中修改为NSArray
+            _tags = [LTSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
+            
+            //刷新表格
+            [self.tableView reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            LTLog(@"%@", error);
+            
+            [SVProgressHUD dismiss];
+            [SVProgressHUD showErrorWithStatus:@"数据加载失败！请检查网络"];
+        }];
+        
+//    });
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
+    //取消会话请求
+    [_sessionMgr.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 
 #pragma mark - Table view data source
@@ -62,59 +91,19 @@ static NSString *const ID = @"cell1";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     LTTagCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+//    if (SystemVersion >= 8.0) {
+//        cell.layoutMargins = UIEdgeInsetsZero;
+//    }
+    
     cell.subTagItem = _tags[indexPath.row];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 60 + 5;
 }
 
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

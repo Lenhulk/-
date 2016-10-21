@@ -9,6 +9,7 @@
 #import "LTTagCell.h"
 #import <UIImageView+WebCache.h>
 #import "LTSubTagItem.h"
+#import "UIImage+LTRender.h"
 
 @interface LTTagCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
@@ -22,12 +23,25 @@
     return [[[NSBundle mainBundle]loadNibNamed:@"LTTagCell" owner:nil options:nil]firstObject];
 }
 
+- (void)setFrame:(CGRect)frame{
+//    LTLog(@"%@", NSStringFromCGRect(frame));
+    frame.size.height -= 5;    //下边距
+    frame.origin.y += 5;    //上边距
+    frame.origin.x += 5;    //左边距
+    frame.size.width -= 10;
+    [super setFrame:frame];
+}
+
+//当cell要显示的时候，系统会自动调用setFrame方法
+
 - (void)setSubTagItem:(LTSubTagItem *)item{
     _subTagItem = item;
     
     [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
     _nameView.text = item.theme_name;
-        //处理订阅数字
+    
+    //处理订阅数字
     CGFloat num = [item.sub_number floatValue];
     NSString *numStr = [NSString stringWithFormat:@"%f人订阅", num];
     if (num > 10000) {
@@ -38,10 +52,6 @@
     _numView.text = numStr;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
