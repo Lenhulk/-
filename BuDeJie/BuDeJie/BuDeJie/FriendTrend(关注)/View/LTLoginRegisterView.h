@@ -1,0 +1,14 @@
+//
+//  LTLoginRegisterView.h
+//  BuDeJie
+//
+//  Created by Lenhulk on 16/10/21.
+//  Copyright © 2016年 Lenhulk. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface LTLoginRegisterView : UIView
++ (instancetype)loginView;
++ (instancetype)registerView;
+@end

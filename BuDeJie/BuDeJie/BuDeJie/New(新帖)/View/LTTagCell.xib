@@ -34,7 +34,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-fS-uo1">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-fS-uo1">
                         <rect key="frame" x="222" y="14" width="80" height="31"/>
                         <state key="normal" title="＋订阅" backgroundImage="tagButtonBG">
                             <color key="titleColor" red="0.95686274510000002" green="0.44940465060000001" blue="0.53942221609999996" alpha="1" colorSpace="calibratedRGB"/>

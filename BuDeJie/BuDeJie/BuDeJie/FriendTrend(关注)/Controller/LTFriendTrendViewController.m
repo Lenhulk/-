@@ -7,6 +7,7 @@
 //
 
 #import "LTFriendTrendViewController.h"
+#import "LTLoginViewController.h"
 @interface LTFriendTrendViewController ()
 @end
 
@@ -24,6 +25,14 @@
 
 - (void)attentionClick{
     LTLog(@"点击关注");
+}
+
+- (IBAction)loginClick:(id)sender {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LTLoginViewController" bundle:nil];
+    //加载箭头指向控制器
+    LTLoginViewController *loginVc = [storyBoard instantiateInitialViewController];
+    //弹出登录界面
+    [self presentViewController:loginVc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

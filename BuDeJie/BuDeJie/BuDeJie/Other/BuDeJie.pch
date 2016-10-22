@@ -13,7 +13,8 @@
 #import "AFHTTPSessionManager+LTManager.h"
 
 #define KBaseURL @"http://api.budejie.com/api/api_open.php"
-
+#define KScreenH [UIScreen mainScreen].bounds.size.height
+#define KScreenW [UIScreen mainScreen].bounds.size.width
 
 #ifdef DEBUG
 #define LTLog(...) NSLog(__VA_ARGS__)

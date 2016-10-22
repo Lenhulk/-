@@ -25,6 +25,14 @@
     return self.frame.size.height;
 }
 
+- (CGFloat)lh_centerX{
+    return  self.center.x;
+}
+
+- (CGFloat)lh_centerY{
+    return  self.center.y;
+}
+
 - (void)setLh_x:(CGFloat)lh_x{
     CGRect frame = self.frame;
     frame.origin.x = lh_x;
@@ -47,5 +55,17 @@
     CGRect frame = self.frame;
     frame.size.height = lh_height;
     self.frame = frame;
+}
+
+- (void)setLh_centerX:(CGFloat)lh_centerX{
+    CGPoint centerP = self.center;
+    centerP.x = lh_centerX;
+    self.center = centerP;
+}
+
+- (void)setLh_centerY:(CGFloat)lh_centerY{
+    CGPoint centerP = self.center;
+    centerP.y = lh_centerY;
+    self.center = centerP;
 }
 @end

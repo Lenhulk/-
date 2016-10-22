@@ -13,4 +13,6 @@
 @property CGFloat lh_y;
 @property CGFloat lh_width;
 @property CGFloat lh_height;
+@property CGFloat lh_centerX;
+@property CGFloat lh_centerY;
 @end

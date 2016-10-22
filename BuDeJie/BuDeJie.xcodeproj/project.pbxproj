@@ -20,6 +20,13 @@
 		E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */; };
 		E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */; };
+		E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */; };
+		E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */; };
+		E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94559BD1DBA1CB30079B985 /* LTLoginViewController.storyboard */; };
+		E94559C11DBA25DC0079B985 /* LTLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C01DBA25DC0079B985 /* LTLoginRegisterView.m */; };
+		E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94559C21DBA28380079B985 /* LTLoginRegisterView.xib */; };
+		E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C51DBA48D50079B985 /* LTFastLoginButton.m */; };
+		E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C81DBA543D0079B985 /* LTLoginField.m */; };
 		E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */; };
 		E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF31DB23E9D00E23BE0 /* LaunchScreen.storyboard */; };
 		E94E20001DB23E9D00E23BE0 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E1FFF1DB23E9D00E23BE0 /* BuDeJieTests.m */; };
@@ -88,6 +95,17 @@
 		E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTFriendTrendViewController.xib; sourceTree = "<group>"; };
+		E94559BA1DBA1CA80079B985 /* LTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginViewController.h; sourceTree = "<group>"; };
+		E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginViewController.m; sourceTree = "<group>"; };
+		E94559BD1DBA1CB30079B985 /* LTLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LTLoginViewController.storyboard; sourceTree = "<group>"; };
+		E94559BF1DBA25DC0079B985 /* LTLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginRegisterView.h; sourceTree = "<group>"; };
+		E94559C01DBA25DC0079B985 /* LTLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginRegisterView.m; sourceTree = "<group>"; };
+		E94559C21DBA28380079B985 /* LTLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTLoginRegisterView.xib; sourceTree = "<group>"; };
+		E94559C41DBA48D50079B985 /* LTFastLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTFastLoginButton.h; sourceTree = "<group>"; };
+		E94559C51DBA48D50079B985 /* LTFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTFastLoginButton.m; sourceTree = "<group>"; };
+		E94559C71DBA543D0079B985 /* LTLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginField.h; sourceTree = "<group>"; };
+		E94559C81DBA543D0079B985 /* LTLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginField.m; sourceTree = "<group>"; };
 		E94E1FE21DB23E9D00E23BE0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94E1FF41DB23E9D00E23BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -391,6 +409,10 @@
 			children = (
 				E94E207C1DB25CAE00E23BE0 /* LTFriendTrendViewController.h */,
 				E94E207D1DB25CAE00E23BE0 /* LTFriendTrendViewController.m */,
+				E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */,
+				E94559BA1DBA1CA80079B985 /* LTLoginViewController.h */,
+				E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */,
+				E94559BD1DBA1CB30079B985 /* LTLoginViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,6 +427,13 @@
 		E94E20621DB2573700E23BE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E94559BF1DBA25DC0079B985 /* LTLoginRegisterView.h */,
+				E94559C01DBA25DC0079B985 /* LTLoginRegisterView.m */,
+				E94559C21DBA28380079B985 /* LTLoginRegisterView.xib */,
+				E94559C41DBA48D50079B985 /* LTFastLoginButton.h */,
+				E94559C51DBA48D50079B985 /* LTFastLoginButton.m */,
+				E94559C71DBA543D0079B985 /* LTLoginField.h */,
+				E94559C81DBA543D0079B985 /* LTLoginField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,11 +742,14 @@
 				E92ECDAB1DB64BF30071C1B7 /* LaunchImage-700-568h@2x.png in Resources */,
 				E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */,
 				E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */,
+				E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */,
 				E92ECDAC1DB64BF30071C1B7 /* LaunchImage-700@2x.png in Resources */,
 				E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */,
 				E92ECDAA1DB64BF30071C1B7 /* LaunchImage-568h@2x.png in Resources */,
 				E92ECDAD1DB64BF30071C1B7 /* LaunchImage-800-667h@2x.png in Resources */,
 				E92ECDA11DB646F30071C1B7 /* LTADViewController.xib in Resources */,
+				E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */,
 				E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */,
 				E97ECD861DB7B4C800DA17F3 /* LTTagCell.xib in Resources */,
 			);
@@ -870,19 +902,23 @@
 				E92ECDA01DB646F30071C1B7 /* LTADViewController.m in Sources */,
 				E95EECB91DB4743500B2A505 /* LTNavigationBar.m in Sources */,
 				E97ECD7E1DB798DE00DA17F3 /* LTSubTagItem.m in Sources */,
+				E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */,
 				E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */,
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
 				E95EECBC1DB4744A00B2A505 /* LTBackView.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,
+				E94559C11DBA25DC0079B985 /* LTLoginRegisterView.m in Sources */,
 				E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */,
 				E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
+				E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */,
 				E97ECD851DB7B4C800DA17F3 /* LTTagCell.m in Sources */,
 				E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */,
+				E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */,
 				E97ECD781DB7444100DA17F3 /* AFHTTPSessionManager+LTManager.m in Sources */,
 				E95EECB31DB46B4A00B2A505 /* LTSettingViewController.m in Sources */,
 				E94E20751DB2573700E23BE0 /* AppDelegate.m in Sources */,
@@ -1029,7 +1065,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1044,7 +1080,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.BuDeJie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
