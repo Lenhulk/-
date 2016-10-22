@@ -11,6 +11,7 @@
 #import "UIBarButtonItem+LTItem.h"
 #import "UIView+LTFrame.h"
 #import "AFHTTPSessionManager+LTManager.h"
+#import "UITextField+LTPlaceholder.h"
 
 #define KBaseURL @"http://api.budejie.com/api/api_open.php"
 #define KScreenH [UIScreen mainScreen].bounds.size.height

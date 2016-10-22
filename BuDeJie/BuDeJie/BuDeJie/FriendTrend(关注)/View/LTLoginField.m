@@ -13,30 +13,27 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     
+    //设置光标颜色
     self.tintColor = [UIColor whiteColor];
     
-    [self addTarget:self action:@selector(textBegin) forControlEvents:UIControlEventEditingDidBegin];
-    [self addTarget:self action:@selector(textEnd) forControlEvents:UIControlEventEditingDidEnd];
+    //打断点找属性
+//    UITextField *t;
     
     //自己设置placeholder的颜色
-    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-    attr[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
-    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:self.placeholder attributes:attr];
-    self.attributedPlaceholder = attrStr;
+    self.placeholderColor = [UIColor lightGrayColor];
+
 }
 
-- (void)textBegin{
-    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-    attr[NSForegroundColorAttributeName] = [UIColor whiteColor];
-    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:self.placeholder attributes:attr];
-    self.attributedPlaceholder = attrStr;
+- (BOOL)becomeFirstResponder{
+    self.placeholderColor = [UIColor whiteColor];
+    
+    return [super becomeFirstResponder];
 }
 
-- (void)textEnd{
-    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-    attr[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
-    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:self.placeholder attributes:attr];
-    self.attributedPlaceholder = attrStr;
+- (BOOL)resignFirstResponder{
+    self.placeholderColor = [UIColor lightGrayColor];
+    
+    return [super resignFirstResponder];
 }
 
 @end
