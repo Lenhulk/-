@@ -113,6 +113,10 @@
         <scene sceneID="jNg-h8-XxZ">
             <objects>
                 <viewController id="H6f-UD-hXm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="egr-c0-ACL"/>
+                        <viewControllerLayoutGuide type="bottom" id="GOI-fT-Lod"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vI4-rK-aQZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

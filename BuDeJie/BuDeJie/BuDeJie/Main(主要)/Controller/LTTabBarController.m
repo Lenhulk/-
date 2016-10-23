@@ -82,7 +82,8 @@
     [self setNavVc:friendTVc image:[UIImage imageNamed:@"tabBar_friendTrends_icon"] selectedImage:[UIImage imageNamedWithOriginalMode:@"tabBar_friendTrends_click_icon"] title:@"关注"];
     
     //我
-    LTMeViewController *meVc = [[LTMeViewController alloc] init];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LTMeViewController" bundle:nil];
+    LTMeViewController *meVc = [storyboard instantiateInitialViewController];
     [self setNavVc:meVc image:[UIImage imageNamed:@"tabBar_me_icon"] selectedImage:[UIImage imageNamedWithOriginalMode:@"tabBar_me_click_icon"] title:@"我"];
 }
 

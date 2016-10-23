@@ -20,6 +20,8 @@
 		E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */; };
 		E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */; };
+		E94469041DBC82EF0034B089 /* LTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469021DBC82EF0034B089 /* LTWebViewController.m */; };
+		E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94469031DBC82EF0034B089 /* LTWebViewController.xib */; };
 		E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */; };
 		E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */; };
 		E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94559BD1DBA1CB30079B985 /* LTLoginViewController.storyboard */; };
@@ -28,6 +30,10 @@
 		E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C51DBA48D50079B985 /* LTFastLoginButton.m */; };
 		E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C81DBA543D0079B985 /* LTLoginField.m */; };
 		E948A4451DBB7C360072208E /* UITextField+LTPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A4441DBB7C360072208E /* UITextField+LTPlaceholder.m */; };
+		E948A4471DBB817B0072208E /* LTMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E948A4461DBB817B0072208E /* LTMeViewController.storyboard */; };
+		E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A4491DBB8A850072208E /* LTSquareCell.m */; };
+		E948A44C1DBB8A850072208E /* LTSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E948A44A1DBB8A850072208E /* LTSquareCell.xib */; };
+		E948A44F1DBB95070072208E /* LTSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A44E1DBB95070072208E /* LTSquareItem.m */; };
 		E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */; };
 		E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF31DB23E9D00E23BE0 /* LaunchScreen.storyboard */; };
 		E94E20001DB23E9D00E23BE0 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E1FFF1DB23E9D00E23BE0 /* BuDeJieTests.m */; };
@@ -96,6 +102,9 @@
 		E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		E94469011DBC82EF0034B089 /* LTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTWebViewController.h; sourceTree = "<group>"; };
+		E94469021DBC82EF0034B089 /* LTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTWebViewController.m; sourceTree = "<group>"; };
+		E94469031DBC82EF0034B089 /* LTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTWebViewController.xib; sourceTree = "<group>"; };
 		E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTFriendTrendViewController.xib; sourceTree = "<group>"; };
 		E94559BA1DBA1CA80079B985 /* LTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginViewController.h; sourceTree = "<group>"; };
 		E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginViewController.m; sourceTree = "<group>"; };
@@ -109,6 +118,12 @@
 		E94559C81DBA543D0079B985 /* LTLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginField.m; sourceTree = "<group>"; };
 		E948A4431DBB7C360072208E /* UITextField+LTPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LTPlaceholder.h"; sourceTree = "<group>"; };
 		E948A4441DBB7C360072208E /* UITextField+LTPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LTPlaceholder.m"; sourceTree = "<group>"; };
+		E948A4461DBB817B0072208E /* LTMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LTMeViewController.storyboard; sourceTree = "<group>"; };
+		E948A4481DBB8A850072208E /* LTSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSquareCell.h; sourceTree = "<group>"; };
+		E948A4491DBB8A850072208E /* LTSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSquareCell.m; sourceTree = "<group>"; };
+		E948A44A1DBB8A850072208E /* LTSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTSquareCell.xib; sourceTree = "<group>"; };
+		E948A44D1DBB95070072208E /* LTSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSquareItem.h; sourceTree = "<group>"; };
+		E948A44E1DBB95070072208E /* LTSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSquareItem.m; sourceTree = "<group>"; };
 		E94E1FE21DB23E9D00E23BE0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94E1FF41DB23E9D00E23BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -497,6 +512,10 @@
 			children = (
 				E94E20851DB25D3300E23BE0 /* LTMeViewController.h */,
 				E94E20861DB25D3300E23BE0 /* LTMeViewController.m */,
+				E948A4461DBB817B0072208E /* LTMeViewController.storyboard */,
+				E94469011DBC82EF0034B089 /* LTWebViewController.h */,
+				E94469021DBC82EF0034B089 /* LTWebViewController.m */,
+				E94469031DBC82EF0034B089 /* LTWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -504,6 +523,8 @@
 		E94E20691DB2573700E23BE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E948A44D1DBB95070072208E /* LTSquareItem.h */,
+				E948A44E1DBB95070072208E /* LTSquareItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,6 +532,9 @@
 		E94E206A1DB2573700E23BE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E948A4481DBB8A850072208E /* LTSquareCell.h */,
+				E948A4491DBB8A850072208E /* LTSquareCell.m */,
+				E948A44A1DBB8A850072208E /* LTSquareCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -745,14 +769,17 @@
 			files = (
 				E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */,
 				E92ECDAB1DB64BF30071C1B7 /* LaunchImage-700-568h@2x.png in Resources */,
+				E948A44C1DBB8A850072208E /* LTSquareCell.xib in Resources */,
 				E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */,
 				E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */,
 				E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */,
 				E92ECDAC1DB64BF30071C1B7 /* LaunchImage-700@2x.png in Resources */,
 				E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */,
+				E948A4471DBB817B0072208E /* LTMeViewController.storyboard in Resources */,
 				E92ECDAA1DB64BF30071C1B7 /* LaunchImage-568h@2x.png in Resources */,
 				E92ECDAD1DB64BF30071C1B7 /* LaunchImage-800-667h@2x.png in Resources */,
+				E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */,
 				E92ECDA11DB646F30071C1B7 /* LTADViewController.xib in Resources */,
 				E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */,
 				E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */,
@@ -918,6 +945,8 @@
 				E94559C11DBA25DC0079B985 /* LTLoginRegisterView.m in Sources */,
 				E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */,
 				E94E208A1DB25D5A00E23BE0 /* LTNewViewController.m in Sources */,
+				E948A44F1DBB95070072208E /* LTSquareItem.m in Sources */,
+				E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
@@ -931,6 +960,7 @@
 				E95EECAC1DB468A400B2A505 /* LTNavigationController.m in Sources */,
 				E91C88FF1DB8D7E400988C6E /* LTSubTagViewController.m in Sources */,
 				E97ECD7B1DB7495E00DA17F3 /* LTADItem.m in Sources */,
+				E94469041DBC82EF0034B089 /* LTWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
