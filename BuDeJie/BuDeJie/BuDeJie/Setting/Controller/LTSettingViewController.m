@@ -7,17 +7,20 @@
 //
 
 #import "LTSettingViewController.h"
+#import <SDImageCache.h>
+#define KCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
+static NSString * const ID = @"cell";
 
 @interface LTSettingViewController ()
 
 @end
 
+
 @implementation LTSettingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
- 
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
 }
 
 
@@ -28,68 +31,72 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+//    NSInteger fileSize = [[SDImageCache sharedImageCache] getSize];//获取的是Cache文件夹中default(存放的是图片缓存)的文件夹尺寸
+//    LTLog(@"%ld--%ld", fileSize, mySize);
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    cell.textLabel.text = [self sizeStr];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+//点击时清理缓存
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[NSFileManager defaultManager] removeItemAtPath:KCachePath error:nil];
+    [[NSFileManager defaultManager] createDirectoryAtPath:KCachePath withIntermediateDirectories:YES attributes:nil error:nil];
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+//清除缓存cell文字显示数据
+- (NSString *)sizeStr{
+    NSString *str = @"清除缓存";
+    NSInteger size = [self getSize];  //获取的是整个Cache(缓存)文件夹的尺寸
+    if (size >= 1000 * 1000) {
+        CGFloat sizeF = size / 1000.0 / 1000.0;
+        str = [NSString stringWithFormat:@"%@(%.1fMB)", str, sizeF];
+    } else if (size >= 1000) {
+        CGFloat sizeF = size / 1000.0;
+        str = [NSString stringWithFormat:@"%@(%.1fKB)", str, sizeF];
+    } else if (size > 0){
+        str = [NSString stringWithFormat:@"%@(%ldB)", str, size];
+    }
+    str = [str stringByReplacingOccurrencesOfString:@".0" withString:@""];
+    return str;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+//获取缓存文件夹总大小
+- (NSInteger)getSize{
+    //获取缓存路径
+    NSString *cachePath = KCachePath;
+//    LTLog(@"%@", cachePath);
+    //获取文件管理者
+    NSFileManager *manager = [NSFileManager defaultManager];
+    //获取路径下的子文件夹
+    NSArray *subPath = [manager subpathsAtPath:cachePath];
+    
+    NSUInteger totalSize = 0;
+    //遍历
+    for (NSString *file in subPath) {
+        NSString *fullPath = [cachePath stringByAppendingPathComponent:file];
+        //隐藏文件不处理
+        if ([fullPath containsString:@".DS"]) continue;
+        //判断是否是文件夹
+        BOOL isDirectory = NO;
+        BOOL isExists = [manager fileExistsAtPath:fullPath isDirectory:&isDirectory];
+        if (isDirectory || !isExists) continue;
+        
+        NSDictionary *attr = [manager attributesOfItemAtPath:fullPath error:nil];
+        totalSize += [attr fileSize];
+    }
+    return totalSize;
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
