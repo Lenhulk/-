@@ -35,6 +35,7 @@
 		E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94559C21DBA28380079B985 /* LTLoginRegisterView.xib */; };
 		E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C51DBA48D50079B985 /* LTFastLoginButton.m */; };
 		E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559C81DBA543D0079B985 /* LTLoginField.m */; };
+		E9477CB81DBDE51C00B410D7 /* LTBaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9477CB71DBDE51C00B410D7 /* LTBaseTabViewController.m */; };
 		E948A4451DBB7C360072208E /* UITextField+LTPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A4441DBB7C360072208E /* UITextField+LTPlaceholder.m */; };
 		E948A4471DBB817B0072208E /* LTMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E948A4461DBB817B0072208E /* LTMeViewController.storyboard */; };
 		E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A4491DBB8A850072208E /* LTSquareCell.m */; };
@@ -134,6 +135,8 @@
 		E94559C51DBA48D50079B985 /* LTFastLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTFastLoginButton.m; sourceTree = "<group>"; };
 		E94559C71DBA543D0079B985 /* LTLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginField.h; sourceTree = "<group>"; };
 		E94559C81DBA543D0079B985 /* LTLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginField.m; sourceTree = "<group>"; };
+		E9477CB61DBDE51C00B410D7 /* LTBaseTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTBaseTabViewController.h; sourceTree = "<group>"; };
+		E9477CB71DBDE51C00B410D7 /* LTBaseTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTBaseTabViewController.m; sourceTree = "<group>"; };
 		E948A4431DBB7C360072208E /* UITextField+LTPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LTPlaceholder.h"; sourceTree = "<group>"; };
 		E948A4441DBB7C360072208E /* UITextField+LTPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LTPlaceholder.m"; sourceTree = "<group>"; };
 		E948A4461DBB817B0072208E /* LTMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LTMeViewController.storyboard; sourceTree = "<group>"; };
@@ -347,6 +350,15 @@
 			path = ChildViewController;
 			sourceTree = "<group>";
 		};
+		E9477CB51DBDE4E000B410D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E9477CB61DBDE51C00B410D7 /* LTBaseTabViewController.h */,
+				E9477CB71DBDE51C00B410D7 /* LTBaseTabViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E94E1FD91DB23E9D00E23BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +422,7 @@
 		E94E20571DB2573700E23BE0 /* BuDeJie */ = {
 			isa = PBXGroup;
 			children = (
+				E9477CB51DBDE4E000B410D7 /* Base */,
 				E94469071DBCE1BC0034B089 /* Utils(工具类) */,
 				E92ECD991DB646D10071C1B7 /* AD */,
 				E94E20581DB2573700E23BE0 /* AppDelegate */,
@@ -1008,6 +1021,7 @@
 				E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
+				E9477CB81DBDE51C00B410D7 /* LTBaseTabViewController.m in Sources */,
 				E94469151DBCFAE30034B089 /* LTVoiceViewController.m in Sources */,
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
 				E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */,

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LTEssenceViewController : UIViewController
-
+#import "LTBaseTabViewController.h"
+@interface LTEssenceViewController : LTBaseTabViewController
 @end
