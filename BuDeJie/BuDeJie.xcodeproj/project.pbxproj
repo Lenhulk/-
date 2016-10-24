@@ -23,6 +23,11 @@
 		E94469041DBC82EF0034B089 /* LTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469021DBC82EF0034B089 /* LTWebViewController.m */; };
 		E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94469031DBC82EF0034B089 /* LTWebViewController.xib */; };
 		E944690B1DBCE1E30034B089 /* LTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E944690A1DBCE1E30034B089 /* LTFileManager.m */; };
+		E944690F1DBCFAC00034B089 /* LTAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E944690E1DBCFAC00034B089 /* LTAllViewController.m */; };
+		E94469121DBCFAD30034B089 /* LTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469111DBCFAD30034B089 /* LTVideoViewController.m */; };
+		E94469151DBCFAE30034B089 /* LTVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469141DBCFAE30034B089 /* LTVoiceViewController.m */; };
+		E94469181DBCFAF20034B089 /* LTPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469171DBCFAF20034B089 /* LTPictureViewController.m */; };
+		E944691B1DBCFB160034B089 /* LTTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E944691A1DBCFB160034B089 /* LTTextViewController.m */; };
 		E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */; };
 		E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */; };
 		E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94559BD1DBA1CB30079B985 /* LTLoginViewController.storyboard */; };
@@ -108,6 +113,16 @@
 		E94469031DBC82EF0034B089 /* LTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTWebViewController.xib; sourceTree = "<group>"; };
 		E94469091DBCE1E30034B089 /* LTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTFileManager.h; sourceTree = "<group>"; };
 		E944690A1DBCE1E30034B089 /* LTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTFileManager.m; sourceTree = "<group>"; };
+		E944690D1DBCFAC00034B089 /* LTAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTAllViewController.h; sourceTree = "<group>"; };
+		E944690E1DBCFAC00034B089 /* LTAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTAllViewController.m; sourceTree = "<group>"; };
+		E94469101DBCFAD30034B089 /* LTVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoViewController.h; sourceTree = "<group>"; };
+		E94469111DBCFAD30034B089 /* LTVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoViewController.m; sourceTree = "<group>"; };
+		E94469131DBCFAE30034B089 /* LTVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVoiceViewController.h; sourceTree = "<group>"; };
+		E94469141DBCFAE30034B089 /* LTVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVoiceViewController.m; sourceTree = "<group>"; };
+		E94469161DBCFAF10034B089 /* LTPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPictureViewController.h; sourceTree = "<group>"; };
+		E94469171DBCFAF20034B089 /* LTPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPictureViewController.m; sourceTree = "<group>"; };
+		E94469191DBCFB160034B089 /* LTTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewController.h; sourceTree = "<group>"; };
+		E944691A1DBCFB160034B089 /* LTTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewController.m; sourceTree = "<group>"; };
 		E94559B81DBA187D0079B985 /* LTFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTFriendTrendViewController.xib; sourceTree = "<group>"; };
 		E94559BA1DBA1CA80079B985 /* LTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLoginViewController.h; sourceTree = "<group>"; };
 		E94559BB1DBA1CA80079B985 /* LTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTLoginViewController.m; sourceTree = "<group>"; };
@@ -315,6 +330,23 @@
 			path = File;
 			sourceTree = "<group>";
 		};
+		E944690C1DBCFA980034B089 /* ChildViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E944690D1DBCFAC00034B089 /* LTAllViewController.h */,
+				E944690E1DBCFAC00034B089 /* LTAllViewController.m */,
+				E94469101DBCFAD30034B089 /* LTVideoViewController.h */,
+				E94469111DBCFAD30034B089 /* LTVideoViewController.m */,
+				E94469131DBCFAE30034B089 /* LTVoiceViewController.h */,
+				E94469141DBCFAE30034B089 /* LTVoiceViewController.m */,
+				E94469161DBCFAF10034B089 /* LTPictureViewController.h */,
+				E94469171DBCFAF20034B089 /* LTPictureViewController.m */,
+				E94469191DBCFB160034B089 /* LTTextViewController.h */,
+				E944691A1DBCFB160034B089 /* LTTextViewController.m */,
+			);
+			path = ChildViewController;
+			sourceTree = "<group>";
+		};
 		E94E1FD91DB23E9D00E23BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +447,7 @@
 		E94E205C1DB2573700E23BE0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E944690C1DBCFA980034B089 /* ChildViewController */,
 				E94E20791DB25C9500E23BE0 /* LTEssenceViewController.h */,
 				E94E207A1DB25C9500E23BE0 /* LTEssenceViewController.m */,
 			);
@@ -960,8 +993,12 @@
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
 				E95EECBC1DB4744A00B2A505 /* LTBackView.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
+				E94469121DBCFAD30034B089 /* LTVideoViewController.m in Sources */,
+				E944691B1DBCFB160034B089 /* LTTextViewController.m in Sources */,
+				E944690F1DBCFAC00034B089 /* LTAllViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,
+				E94469181DBCFAF20034B089 /* LTPictureViewController.m in Sources */,
 				E944690B1DBCE1E30034B089 /* LTFileManager.m in Sources */,
 				E948A4451DBB7C360072208E /* UITextField+LTPlaceholder.m in Sources */,
 				E94559C11DBA25DC0079B985 /* LTLoginRegisterView.m in Sources */,
@@ -971,6 +1008,7 @@
 				E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
+				E94469151DBCFAE30034B089 /* LTVoiceViewController.m in Sources */,
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
 				E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */,
 				E97ECD851DB7B4C800DA17F3 /* LTTagCell.m in Sources */,
