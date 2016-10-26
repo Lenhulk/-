@@ -7,38 +7,84 @@
 //
 
 #import "LTAllViewController.h"
+#import "LTTopicCell.h"
+#import "LTTopicItem.h"
+#import <MJExtension/MJExtension.h>
+#import "LTTopicViewModel.h"
 
 static NSString *const ID = @"cell";
 
 @interface LTAllViewController ()
-
+@property (nonatomic, strong) NSMutableArray *topicsVM;
 @end
 
 @implementation LTAllViewController
 
+- (NSMutableArray *)topicsVM{
+    if (_topicsVM == nil) {
+        _topicsVM = [NSMutableArray array];
+    }
+    return _topicsVM;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    // 只要通过registerClass，TableViewCell就是通过initWithStyle
+    [self.tableView registerClass:[LTTopicCell class] forCellReuseIdentifier:ID];
+    
+    //网络数据
+    [self loadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData{
+
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager lh_manager];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(LTTopicItemTypeVoice);
+    
+    [manager GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+        
+        //字典数组 转 模型数组
+        NSArray *topics = [LTTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //模型 转 视图模型
+        for (LTTopicItem *item in topics) {
+            LTTopicViewModel *topicVm = [[LTTopicViewModel alloc] init];
+            topicVm.item = item;            //赋值，在set方法计算cell高度
+            [self.topicsVM addObject:topicVm];  //保存记录VM
+        }
+        
+        //刷新表格
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        LTLog(@"ERROR-%@", error);
+    }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.topicsVM.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"全部%ld", indexPath.row];
+    LTTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+
+//    cell.item = [self.topics[indexPath.row] item];
+    cell.vm = self.topicsVM[indexPath.row] ;
+    
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [_topicsVM[indexPath.row] cellH];
 }
 
 

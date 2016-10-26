@@ -24,10 +24,10 @@
  *  @param directoryPath 文件夹路径
  *  @return 文件夹内容大小
  */
-+ (void)getDirectorySize:(NSString *)directoryPath completion:(void(^)(int))completion;
++ (void)getDirectorySize:(NSString *)directoryPath completion:(void(^)(NSInteger))completion;
 
 /**
- 指定一个文件夹路径，直接帮你获取当前文件夹尺寸字符串
+ 指定一个文件夹路径，直接帮你获取当前文件夹尺寸+字符串
  */
 + (void)directorySizeString:(NSString *)directoryPath completion:(void(^)(NSString *))strCompletion;
 

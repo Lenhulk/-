@@ -104,6 +104,7 @@ static CGFloat const margin = 1;
         CGFloat collectionH = rows * itemWH + (rows - 1) * margin;
         self.collectionView.lh_height = collectionH;
         
+//        self.tableView.contentSize = CGSizeMake(KScreenW, CGRectGetMaxY(self.collectionView.frame));
         //传给子控件间接设置滚动范围
         self.tableView.tableFooterView = self.collectionView;
         
@@ -148,6 +149,7 @@ static CGFloat const margin = 1;
     LTSquareItem *item = self.squareList[indexPath.row];
     NSURL *url = [NSURL URLWithString:item.url];
 
+    //版本适配选择内置浏览器
     if (KSystemVersion >= 9.0) {
         
         SFSafariViewController *safariVc = [[SFSafariViewController alloc] initWithURL:url];

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bAI-pn-cS7" customClass="LTTopTopicView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f65-Rf-j6f">
+                    <rect key="frame" x="10" y="10" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="5iN-TN-wy9"/>
+                        <constraint firstAttribute="height" constant="35" id="Mng-ep-JlO"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojs-ja-Deu">
+                    <rect key="frame" x="55" y="10" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ2-l2-jBE">
+                    <rect key="frame" x="55" y="28" width="36" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C55-JD-xew">
+                    <rect key="frame" x="341" y="15" width="24" height="22"/>
+                    <state key="normal" image="cellmorebtnnormal"/>
+                    <state key="highlighted" image="cellmorebtnclick"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS0-w6-5qT">
+                    <rect key="frame" x="10" y="55" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OS0-w6-5qT" firstAttribute="leading" secondItem="bAI-pn-cS7" secondAttribute="leading" constant="10" id="0Oz-lS-gh6"/>
+                <constraint firstItem="ojs-ja-Deu" firstAttribute="top" secondItem="f65-Rf-j6f" secondAttribute="top" id="6jD-dC-Igh"/>
+                <constraint firstItem="nJ2-l2-jBE" firstAttribute="bottom" secondItem="f65-Rf-j6f" secondAttribute="bottom" id="9UJ-pK-cZl"/>
+                <constraint firstItem="OS0-w6-5qT" firstAttribute="top" secondItem="f65-Rf-j6f" secondAttribute="bottom" constant="10" id="9iK-95-3gn"/>
+                <constraint firstItem="f65-Rf-j6f" firstAttribute="top" secondItem="bAI-pn-cS7" secondAttribute="top" constant="10" id="HGs-pu-IPE"/>
+                <constraint firstAttribute="trailing" secondItem="OS0-w6-5qT" secondAttribute="trailing" constant="10" id="J72-mJ-uVV"/>
+                <constraint firstItem="f65-Rf-j6f" firstAttribute="leading" secondItem="bAI-pn-cS7" secondAttribute="leading" constant="10" id="KuS-qk-kr8"/>
+                <constraint firstAttribute="trailing" secondItem="C55-JD-xew" secondAttribute="trailing" constant="10" id="LZO-Kg-wht"/>
+                <constraint firstItem="ojs-ja-Deu" firstAttribute="leading" secondItem="f65-Rf-j6f" secondAttribute="trailing" constant="10" id="eez-X1-jYY"/>
+                <constraint firstItem="nJ2-l2-jBE" firstAttribute="leading" secondItem="f65-Rf-j6f" secondAttribute="trailing" constant="10" id="fsu-St-O0g"/>
+                <constraint firstItem="C55-JD-xew" firstAttribute="top" secondItem="bAI-pn-cS7" secondAttribute="top" constant="15" id="psy-rj-7Zu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="f65-Rf-j6f" id="qX5-rO-A16"/>
+                <outlet property="nameLabel" destination="ojs-ja-Deu" id="X8a-j9-Rdl"/>
+                <outlet property="textLabel" destination="OS0-w6-5qT" id="pS0-e9-e1a"/>
+                <outlet property="timeLabel" destination="nJ2-l2-jBE" id="mOc-we-fuf"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="529"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cellmorebtnclick" width="24" height="20"/>
+        <image name="cellmorebtnnormal" width="24" height="20"/>
+    </resources>
+</document>

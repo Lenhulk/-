@@ -24,9 +24,9 @@
     [[NSFileManager defaultManager] createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:nil];
 }
 
-+ (void)getDirectorySize:(NSString *)directoryPath completion:(void (^)(NSInteger))completion{
++ (void)getDirectorySize:(NSString *)directoryPath completion:(void (^)(NSInteger ))completion{
     
-    //开子线程处理计算，防止进入页面卡顿
+    //开子线程处理计算，防止点击时当前页面卡顿
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
         //容错处理
@@ -68,11 +68,11 @@
 
 + (void)directorySizeString:(NSString *)directoryPath completion:(void (^)(NSString *))strCompletion{
     
-    [LTFileManager getDirectorySize:directoryPath completion:^(int totalSize) {
+    [LTFileManager getDirectorySize:directoryPath completion:^(NSInteger totalSize) {
         
         NSString *str = @"清除缓存";
         
-        int size = totalSize;
+        NSInteger size = totalSize;
         
         if (size >= 1000 * 1000) {
             CGFloat sizeF = size / 1000.0 / 1000.0;
@@ -83,7 +83,7 @@
             str = [NSString stringWithFormat:@"%@(%.1fKB)", str, sizeF];
             
         } else if (size > 0){
-            str = [NSString stringWithFormat:@"%@(%dB)", str, size];
+            str = [NSString stringWithFormat:@"%@(%ldB)", str, (long)size];
         }
         
         str = [str stringByReplacingOccurrencesOfString:@".0" withString:@""];

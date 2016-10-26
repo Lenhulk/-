@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		99FC2887F3D6E3B66B165065 /* libPods-BuDeJieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC1ACE1D401320F5A3215B5 /* libPods-BuDeJieUITests.a */; };
 		C51733FB297D7E62A068ED6D /* libPods-BuDeJieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 027006FF9DFFAE8DB2F3960E /* libPods-BuDeJieTests.a */; };
+		E9088D801DC0D0C000C31CC3 /* LTVideoTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9088D7F1DC0D0C000C31CC3 /* LTVideoTopicView.m */; };
+		E9088D821DC0D0D100C31CC3 /* LTVideoTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9088D811DC0D0D100C31CC3 /* LTVideoTopicView.xib */; };
+		E9088D851DC0E3AF00C31CC3 /* LTVoiceTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */; };
+		E9088D871DC0E3BA00C31CC3 /* LTVoiceTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */; };
 		E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */ = {isa = PBXBuildFile; fileRef = E90960D11DB39A980068E79D /* UIImage+LTRender.m */; };
 		E91C88FF1DB8D7E400988C6E /* LTSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C88FE1DB8D7E400988C6E /* LTSubTagViewController.m */; };
 		E92ECDA01DB646F30071C1B7 /* LTADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92ECD9E1DB646F30071C1B7 /* LTADViewController.m */; };
@@ -65,6 +69,14 @@
 		E97ECD851DB7B4C800DA17F3 /* LTTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E97ECD831DB7B4C800DA17F3 /* LTTagCell.m */; };
 		E97ECD861DB7B4C800DA17F3 /* LTTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E97ECD841DB7B4C800DA17F3 /* LTTagCell.xib */; };
 		E9B6C7951DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */; };
+		E9D894461DBF701200E3F2D9 /* LTTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D894451DBF701200E3F2D9 /* LTTopicCell.m */; };
+		E9D8944A1DBF70DD00E3F2D9 /* LTTopTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D894491DBF70DD00E3F2D9 /* LTTopTopicView.m */; };
+		E9D8944C1DBF70E800E3F2D9 /* LTTopTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D8944B1DBF70E800E3F2D9 /* LTTopTopicView.xib */; };
+		E9D8944F1DBF777000E3F2D9 /* LTTopicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D8944E1DBF777000E3F2D9 /* LTTopicItem.m */; };
+		E9D894531DBF899000E3F2D9 /* LTTopicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D894521DBF899000E3F2D9 /* LTTopicViewModel.m */; };
+		E9D894581DBF9AD900E3F2D9 /* LTPictureTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9D894571DBF9AD900E3F2D9 /* LTPictureTopicView.xib */; };
+		E9D8945B1DBF9B2F00E3F2D9 /* LTPictureTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D8945A1DBF9B2F00E3F2D9 /* LTPictureTopicView.m */; };
+		E9D8945E1DBFA11100E3F2D9 /* LTBaseTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D8945D1DBFA11100E3F2D9 /* LTBaseTopicView.m */; };
 		F917D0E20BDF18730CC46E19 /* libPods-BuDeJie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A93A62478BF7A0807FD374E4 /* libPods-BuDeJie.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +107,12 @@
 		89BE39B31956FF96CA93483A /* Pods-BuDeJieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuDeJieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuDeJieUITests/Pods-BuDeJieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A93A62478BF7A0807FD374E4 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1ACE1D401320F5A3215B5 /* libPods-BuDeJieUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJieUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9088D7E1DC0D0C000C31CC3 /* LTVideoTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoTopicView.h; sourceTree = "<group>"; };
+		E9088D7F1DC0D0C000C31CC3 /* LTVideoTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoTopicView.m; sourceTree = "<group>"; };
+		E9088D811DC0D0D100C31CC3 /* LTVideoTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTVideoTopicView.xib; sourceTree = "<group>"; };
+		E9088D831DC0E3AF00C31CC3 /* LTVoiceTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVoiceTopicView.h; sourceTree = "<group>"; };
+		E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVoiceTopicView.m; sourceTree = "<group>"; };
+		E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTVoiceTopicView.xib; sourceTree = "<group>"; };
 		E90960D01DB39A980068E79D /* UIImage+LTRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LTRender.h"; sourceTree = "<group>"; };
 		E90960D11DB39A980068E79D /* UIImage+LTRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LTRender.m"; sourceTree = "<group>"; };
 		E91C88FD1DB8D7E400988C6E /* LTSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSubTagViewController.h; sourceTree = "<group>"; };
@@ -194,6 +212,20 @@
 		E97ECD841DB7B4C800DA17F3 /* LTTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTTagCell.xib; sourceTree = "<group>"; };
 		E9B6C7931DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LTItem.h"; sourceTree = "<group>"; };
 		E9B6C7941DB3BCEA00DD6003 /* UIBarButtonItem+LTItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LTItem.m"; sourceTree = "<group>"; };
+		E9D894441DBF701200E3F2D9 /* LTTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTopicCell.h; sourceTree = "<group>"; };
+		E9D894451DBF701200E3F2D9 /* LTTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTopicCell.m; sourceTree = "<group>"; };
+		E9D894481DBF70DD00E3F2D9 /* LTTopTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTopTopicView.h; sourceTree = "<group>"; };
+		E9D894491DBF70DD00E3F2D9 /* LTTopTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTopTopicView.m; sourceTree = "<group>"; };
+		E9D8944B1DBF70E800E3F2D9 /* LTTopTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTTopTopicView.xib; sourceTree = "<group>"; };
+		E9D8944D1DBF777000E3F2D9 /* LTTopicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTopicItem.h; sourceTree = "<group>"; };
+		E9D8944E1DBF777000E3F2D9 /* LTTopicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTopicItem.m; sourceTree = "<group>"; };
+		E9D894511DBF899000E3F2D9 /* LTTopicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTopicViewModel.h; sourceTree = "<group>"; };
+		E9D894521DBF899000E3F2D9 /* LTTopicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTopicViewModel.m; sourceTree = "<group>"; };
+		E9D894571DBF9AD900E3F2D9 /* LTPictureTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTPictureTopicView.xib; sourceTree = "<group>"; };
+		E9D894591DBF9B2F00E3F2D9 /* LTPictureTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPictureTopicView.h; sourceTree = "<group>"; };
+		E9D8945A1DBF9B2F00E3F2D9 /* LTPictureTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPictureTopicView.m; sourceTree = "<group>"; };
+		E9D8945C1DBFA11100E3F2D9 /* LTBaseTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTBaseTopicView.h; sourceTree = "<group>"; };
+		E9D8945D1DBFA11100E3F2D9 /* LTBaseTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTBaseTopicView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -450,6 +482,7 @@
 		E94E205B1DB2573700E23BE0 /* Essence(精华) */ = {
 			isa = PBXGroup;
 			children = (
+				E9D894501DBF897200E3F2D9 /* ViewModel */,
 				E94E205C1DB2573700E23BE0 /* Controller */,
 				E94E205D1DB2573700E23BE0 /* Model */,
 				E94E205E1DB2573700E23BE0 /* View */,
@@ -470,6 +503,8 @@
 		E94E205D1DB2573700E23BE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9D8944D1DBF777000E3F2D9 /* LTTopicItem.h */,
+				E9D8944E1DBF777000E3F2D9 /* LTTopicItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -477,6 +512,9 @@
 		E94E205E1DB2573700E23BE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9D894471DBF70C200E3F2D9 /* CellChildView */,
+				E9D894441DBF701200E3F2D9 /* LTTopicCell.h */,
+				E9D894451DBF701200E3F2D9 /* LTTopicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -722,6 +760,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E9D894471DBF70C200E3F2D9 /* CellChildView */ = {
+			isa = PBXGroup;
+			children = (
+				E9D8945C1DBFA11100E3F2D9 /* LTBaseTopicView.h */,
+				E9D8945D1DBFA11100E3F2D9 /* LTBaseTopicView.m */,
+				E9D894481DBF70DD00E3F2D9 /* LTTopTopicView.h */,
+				E9D894491DBF70DD00E3F2D9 /* LTTopTopicView.m */,
+				E9D8944B1DBF70E800E3F2D9 /* LTTopTopicView.xib */,
+				E9D894591DBF9B2F00E3F2D9 /* LTPictureTopicView.h */,
+				E9D8945A1DBF9B2F00E3F2D9 /* LTPictureTopicView.m */,
+				E9D894571DBF9AD900E3F2D9 /* LTPictureTopicView.xib */,
+				E9088D7E1DC0D0C000C31CC3 /* LTVideoTopicView.h */,
+				E9088D7F1DC0D0C000C31CC3 /* LTVideoTopicView.m */,
+				E9088D811DC0D0D100C31CC3 /* LTVideoTopicView.xib */,
+				E9088D831DC0E3AF00C31CC3 /* LTVoiceTopicView.h */,
+				E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */,
+				E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */,
+			);
+			path = CellChildView;
+			sourceTree = "<group>";
+		};
+		E9D894501DBF897200E3F2D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E9D894511DBF899000E3F2D9 /* LTTopicViewModel.h */,
+				E9D894521DBF899000E3F2D9 /* LTTopicViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -842,10 +910,14 @@
 				E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */,
 				E92ECDAC1DB64BF30071C1B7 /* LaunchImage-700@2x.png in Resources */,
 				E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				E9D8944C1DBF70E800E3F2D9 /* LTTopTopicView.xib in Resources */,
 				E94559BE1DBA1CB30079B985 /* LTLoginViewController.storyboard in Resources */,
+				E9088D821DC0D0D100C31CC3 /* LTVideoTopicView.xib in Resources */,
 				E948A4471DBB817B0072208E /* LTMeViewController.storyboard in Resources */,
+				E9088D871DC0E3BA00C31CC3 /* LTVoiceTopicView.xib in Resources */,
 				E92ECDAA1DB64BF30071C1B7 /* LaunchImage-568h@2x.png in Resources */,
 				E92ECDAD1DB64BF30071C1B7 /* LaunchImage-800-667h@2x.png in Resources */,
+				E9D894581DBF9AD900E3F2D9 /* LTPictureTopicView.xib in Resources */,
 				E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */,
 				E92ECDA11DB646F30071C1B7 /* LTADViewController.xib in Resources */,
 				E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */,
@@ -1001,8 +1073,11 @@
 				E92ECDA01DB646F30071C1B7 /* LTADViewController.m in Sources */,
 				E95EECB91DB4743500B2A505 /* LTNavigationBar.m in Sources */,
 				E97ECD7E1DB798DE00DA17F3 /* LTSubTagItem.m in Sources */,
+				E9D894461DBF701200E3F2D9 /* LTTopicCell.m in Sources */,
 				E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */,
+				E9D894531DBF899000E3F2D9 /* LTTopicViewModel.m in Sources */,
 				E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */,
+				E9088D851DC0E3AF00C31CC3 /* LTVoiceTopicView.m in Sources */,
 				E94E20761DB2573700E23BE0 /* main.m in Sources */,
 				E95EECBC1DB4744A00B2A505 /* LTBackView.m in Sources */,
 				E94E208D1DB25D6F00E23BE0 /* LTPublishViewController.m in Sources */,
@@ -1010,8 +1085,11 @@
 				E944691B1DBCFB160034B089 /* LTTextViewController.m in Sources */,
 				E944690F1DBCFAC00034B089 /* LTAllViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
+				E9D8944A1DBF70DD00E3F2D9 /* LTTopTopicView.m in Sources */,
+				E9D8945B1DBF9B2F00E3F2D9 /* LTPictureTopicView.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,
 				E94469181DBCFAF20034B089 /* LTPictureViewController.m in Sources */,
+				E9088D801DC0D0C000C31CC3 /* LTVideoTopicView.m in Sources */,
 				E944690B1DBCE1E30034B089 /* LTFileManager.m in Sources */,
 				E948A4451DBB7C360072208E /* UITextField+LTPlaceholder.m in Sources */,
 				E94559C11DBA25DC0079B985 /* LTLoginRegisterView.m in Sources */,
@@ -1026,9 +1104,11 @@
 				E94E207B1DB25C9500E23BE0 /* LTEssenceViewController.m in Sources */,
 				E94559C91DBA543D0079B985 /* LTLoginField.m in Sources */,
 				E97ECD851DB7B4C800DA17F3 /* LTTagCell.m in Sources */,
+				E9D8944F1DBF777000E3F2D9 /* LTTopicItem.m in Sources */,
 				E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */,
 				E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */,
 				E97ECD781DB7444100DA17F3 /* AFHTTPSessionManager+LTManager.m in Sources */,
+				E9D8945E1DBFA11100E3F2D9 /* LTBaseTopicView.m in Sources */,
 				E95EECB31DB46B4A00B2A505 /* LTSettingViewController.m in Sources */,
 				E94E20751DB2573700E23BE0 /* AppDelegate.m in Sources */,
 				E95EECAC1DB468A400B2A505 /* LTNavigationController.m in Sources */,

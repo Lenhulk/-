@@ -27,7 +27,6 @@ static NSString * const ID = @"cell";
     [SVProgressHUD showWithStatus:@"正在计算缓存大小..."];
     
     [LTFileManager directorySizeString:KCachePath completion:^(NSString *str) {
-        
         [SVProgressHUD dismiss];
         _str = str;
         [self.tableView reloadData];
@@ -66,6 +65,9 @@ static NSString * const ID = @"cell";
 //    [LTFileManager removeDirectoryPath:@"nimei"];//测试容错处理
     
     if(indexPath.section == 0) [LTFileManager removeDirectoryPath:KCachePath];
+    
+    _str = @"清理缓存";
+    
     //刷新表格
     [self.tableView reloadData];
 }
