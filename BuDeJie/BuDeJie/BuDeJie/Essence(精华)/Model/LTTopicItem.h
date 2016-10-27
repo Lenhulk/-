@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LTCommentItem;
+
 typedef enum : NSUInteger {
     LTTopicItemTypeAll = 1,
     LTTopicItemTypePicture = 10,
@@ -43,4 +45,18 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong) NSString *voiceuri;
 @property (nonatomic, assign) NSInteger voicelength;
+/*
+ 处理最热评论数据：top_cmt
+ */
+@property (nonatomic, strong) NSArray *top_cmt;
+@property (nonatomic, strong) LTCommentItem *topComment;
+/**
+ *
+  底部View属性 cai ding comment repost
+ */
+@property (nonatomic, assign) CGFloat cai;
+@property (nonatomic, assign) CGFloat ding;
+@property (nonatomic, assign) CGFloat comment;
+@property (nonatomic, assign) CGFloat repost;
+
 @end

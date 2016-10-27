@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rGb-sY-jN3" customClass="LTCommentTopicView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔥最热评论：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukP-KY-NmC">
+                    <rect key="frame" x="10" y="0.0" width="355" height="21"/>
+                    <color key="backgroundColor" red="0.36671218080000001" green="0.86450380019999995" blue="0.92272642689999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12a-P7-hQb" userLabel="Total">
+                    <rect key="frame" x="10" y="21" width="355" height="21"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.44940465060000001" blue="0.53942221609999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xD7-Bs-1LE" userLabel="Voice View">
+                    <rect key="frame" x="10" y="21" width="355" height="22"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小明：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veI-4a-5uE">
+                            <rect key="frame" x="0.0" y="0.0" width="51" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="nwq-9C-fbf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEN-Ji-UY1">
+                            <rect key="frame" x="51" y="0.0" width="66" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="17‘" image="play-voice-stop" backgroundImage="play-voice-bg">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.44940465060000001" blue="0.53942221609999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="veI-4a-5uE" firstAttribute="top" secondItem="xD7-Bs-1LE" secondAttribute="top" id="1Gq-gY-46P"/>
+                        <constraint firstAttribute="height" secondItem="veI-4a-5uE" secondAttribute="height" id="958-Et-IzL"/>
+                        <constraint firstItem="bEN-Ji-UY1" firstAttribute="leading" secondItem="veI-4a-5uE" secondAttribute="trailing" id="IgY-RY-7JU"/>
+                        <constraint firstItem="veI-4a-5uE" firstAttribute="leading" secondItem="xD7-Bs-1LE" secondAttribute="leading" id="Obk-NG-Elm"/>
+                        <constraint firstItem="bEN-Ji-UY1" firstAttribute="height" secondItem="veI-4a-5uE" secondAttribute="height" id="RY4-ks-Ffi"/>
+                        <constraint firstItem="bEN-Ji-UY1" firstAttribute="top" secondItem="xD7-Bs-1LE" secondAttribute="top" id="jeV-XH-sAQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ukP-KY-NmC" firstAttribute="leading" secondItem="rGb-sY-jN3" secondAttribute="leading" constant="10" id="0FZ-hm-YKi"/>
+                <constraint firstAttribute="trailing" secondItem="ukP-KY-NmC" secondAttribute="trailing" constant="10" id="CJw-8Q-ntV"/>
+                <constraint firstAttribute="trailing" secondItem="12a-P7-hQb" secondAttribute="trailing" constant="10" id="D80-WF-7in"/>
+                <constraint firstItem="xD7-Bs-1LE" firstAttribute="leading" secondItem="rGb-sY-jN3" secondAttribute="leading" constant="10" id="GIp-d8-AJX"/>
+                <constraint firstAttribute="trailing" secondItem="xD7-Bs-1LE" secondAttribute="trailing" constant="10" id="cqE-GY-3yt"/>
+                <constraint firstItem="xD7-Bs-1LE" firstAttribute="top" secondItem="ukP-KY-NmC" secondAttribute="bottom" id="hhV-RM-p38"/>
+                <constraint firstItem="12a-P7-hQb" firstAttribute="leading" secondItem="rGb-sY-jN3" secondAttribute="leading" constant="10" id="kja-37-sVi"/>
+                <constraint firstItem="12a-P7-hQb" firstAttribute="top" secondItem="ukP-KY-NmC" secondAttribute="bottom" id="koz-vO-PuZ"/>
+                <constraint firstItem="ukP-KY-NmC" firstAttribute="top" secondItem="rGb-sY-jN3" secondAttribute="top" id="qrN-HP-r0U"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="totalView" destination="12a-P7-hQb" id="HFM-Pe-0Qh"/>
+                <outlet property="userNameLabel" destination="veI-4a-5uE" id="ObV-zi-F3O"/>
+                <outlet property="voiceButton" destination="bEN-Ji-UY1" id="Qml-b1-tYY"/>
+                <outlet property="voiceView" destination="xD7-Bs-1LE" id="rRL-uC-PrW"/>
+            </connections>
+            <point key="canvasLocation" x="241.5" y="160"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play-voice-bg" width="62" height="22"/>
+        <image name="play-voice-stop" width="12" height="12"/>
+    </resources>
+</document>

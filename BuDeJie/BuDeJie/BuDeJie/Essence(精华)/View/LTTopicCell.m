@@ -15,15 +15,25 @@
 #import "LTPictureTopicView.h"
 #import "LTVideoTopicView.h"
 #import "LTVoiceTopicView.h"
+#import "LTCommentTopicView.h"
+#import "LTBottomView.h"
 
 @interface LTTopicCell ()
 @property (nonatomic, weak) LTTopTopicView *topTopicView;
 @property (nonatomic, weak) LTPictureTopicView *pictureView;
 @property (nonatomic, weak) LTVideoTopicView *videoView;
 @property (nonatomic, weak) LTVoiceTopicView *voiceView;
+@property (nonatomic, weak) LTCommentTopicView *commentView;
+@property (nonatomic, weak) LTBottomView *bottomView;
 @end
 
 @implementation LTTopicCell
+
+- (void)setFrame:(CGRect)frame{
+    frame.origin.y += 10;
+    frame.size.height -= 10;
+    [super setFrame:frame];
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 
@@ -47,6 +57,14 @@
         LTVoiceTopicView *voiceView = [LTVoiceTopicView viewForXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
+        // 最热评论
+        LTCommentTopicView *commentView = [LTCommentTopicView viewForXib];
+        [self.contentView addSubview:commentView];
+        _commentView = commentView;
+        // 底部
+        LTBottomView *bottomView = [LTBottomView viewForXib];
+        [self.contentView addSubview:bottomView];
+        _bottomView = bottomView;
     }
     return self;
 }
@@ -60,11 +78,11 @@
 - (void)setVm:(LTTopicViewModel *)vm{
     _vm = vm;
     
-    //top
+    //Top
     _topTopicView.item = vm.item;
     _topTopicView.frame = vm.topViewFrame;
     
-    //middle
+    //Middle
      if (vm.item.type == LTTopicItemTypePicture){
          
         _pictureView.item = vm.item;
@@ -72,7 +90,7 @@
         
         _pictureView.hidden = NO;
         _videoView.hidden = YES;
-         _voiceView.hidden = YES;
+        _voiceView.hidden = YES;
          
      } else if (vm.item.type == LTTopicItemTypeVideo) {
          
@@ -95,8 +113,20 @@
      } else {   //段子
          _videoView.hidden = YES;
          _pictureView.hidden = YES;
-         
      }
+    
+    //Comment
+    if (vm.item.topComment) {
+        _commentView.hidden = NO;
+        _commentView.item = vm.item;
+        _commentView.frame = vm.commentViewFrame;
+    } else {
+        _commentView.hidden = YES;
+    }
+    
+    //Bottom
+    _bottomView.item = vm.item;
+    _bottomView.frame = vm.bottomViewFrame;
 }
 
 @end

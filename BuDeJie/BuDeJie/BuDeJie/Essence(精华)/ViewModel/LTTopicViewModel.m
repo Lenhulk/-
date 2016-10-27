@@ -8,6 +8,8 @@
 
 #import "LTTopicViewModel.h"
 #import "LTTopicItem.h"
+#import "LTCommentItem.h"
+
 
 @implementation LTTopicViewModel
 
@@ -42,6 +44,28 @@
         _middleViewFrame = CGRectMake(middleX, middleY, middleW, middleH);
         _cellH = CGRectGetMaxY(self.middleViewFrame) + margin;
     }
+    
+    //最热评论
+    if (item.topComment) {
+        CGFloat commentX = 0;
+        CGFloat commentY = _cellH;
+        CGFloat commentW = KScreenW;
+        CGFloat commentH = 21 + 22;
+        if (item.topComment.content.length) {   //文字评论
+            CGFloat textH = [item.topComment.totalContent sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
+            commentH = 21 + textH;
+        }
+        _commentViewFrame = CGRectMake(commentX, commentY, commentW, commentH);
+        _cellH = CGRectGetMaxY(self.commentViewFrame) + margin;
+    }
+    
+    //bottomView
+    CGFloat bottomX = 0;
+    CGFloat bottomY = _cellH;
+    CGFloat bottomW = KScreenW;
+    CGFloat bottomH = 35;
+    _bottomViewFrame = CGRectMake(bottomX, bottomY, bottomW, bottomH);
+    _cellH = CGRectGetMaxY(self.bottomViewFrame);
 }
 
 

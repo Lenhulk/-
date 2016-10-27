@@ -30,6 +30,8 @@ static NSString *const ID = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    
     // 只要通过registerClass，TableViewCell就是通过initWithStyle
     [self.tableView registerClass:[LTTopicCell class] forCellReuseIdentifier:ID];
     
@@ -44,9 +46,11 @@ static NSString *const ID = @"cell";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @(LTTopicItemTypeVoice);
+    parameters[@"type"] = @(LTTopicItemTypePicture);
     
     [manager GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+        
+//        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/voice.plist" atomically:YES];
         
         //字典数组 转 模型数组
         NSArray *topics = [LTTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -84,7 +88,7 @@ static NSString *const ID = @"cell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [_topicsVM[indexPath.row] cellH];
+    return [_topicsVM[indexPath.row] cellH] + 10;
 }
 
 

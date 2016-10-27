@@ -13,6 +13,8 @@
 		E9088D821DC0D0D100C31CC3 /* LTVideoTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9088D811DC0D0D100C31CC3 /* LTVideoTopicView.xib */; };
 		E9088D851DC0E3AF00C31CC3 /* LTVoiceTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */; };
 		E9088D871DC0E3BA00C31CC3 /* LTVoiceTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */; };
+		E9088D8A1DC0EB1800C31CC3 /* LTCommentTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9088D891DC0EB1800C31CC3 /* LTCommentTopicView.m */; };
+		E9088D8C1DC0EB3100C31CC3 /* LTCommentTopicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9088D8B1DC0EB3100C31CC3 /* LTCommentTopicView.xib */; };
 		E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */ = {isa = PBXBuildFile; fileRef = E90960D11DB39A980068E79D /* UIImage+LTRender.m */; };
 		E91C88FF1DB8D7E400988C6E /* LTSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91C88FE1DB8D7E400988C6E /* LTSubTagViewController.m */; };
 		E92ECDA01DB646F30071C1B7 /* LTADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92ECD9E1DB646F30071C1B7 /* LTADViewController.m */; };
@@ -45,6 +47,13 @@
 		E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A4491DBB8A850072208E /* LTSquareCell.m */; };
 		E948A44C1DBB8A850072208E /* LTSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E948A44A1DBB8A850072208E /* LTSquareCell.xib */; };
 		E948A44F1DBB95070072208E /* LTSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E948A44E1DBB95070072208E /* LTSquareItem.m */; };
+		E94CF5451DC1953800629C60 /* LTCommentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E94CF5441DC1953800629C60 /* LTCommentItem.m */; };
+		E94CF5481DC196A800629C60 /* LTUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E94CF5471DC196A800629C60 /* LTUserItem.m */; };
+		E94CF54B1DC1C1FE00629C60 /* LTBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = E94CF54A1DC1C1FE00629C60 /* LTBottomView.m */; };
+		E94CF54D1DC1C20D00629C60 /* LTBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94CF54C1DC1C20D00629C60 /* LTBottomView.xib */; };
+		E94CF5501DC1E42500629C60 /* NSDate+LTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E94CF54F1DC1E42500629C60 /* NSDate+LTDate.m */; };
+		E94CF5541DC1F4FE00629C60 /* LTSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94CF5521DC1F4FE00629C60 /* LTSeeBigPictureViewController.m */; };
+		E94CF5551DC1F4FE00629C60 /* LTSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94CF5531DC1F4FE00629C60 /* LTSeeBigPictureViewController.xib */; };
 		E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */; };
 		E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94E1FF31DB23E9D00E23BE0 /* LaunchScreen.storyboard */; };
 		E94E20001DB23E9D00E23BE0 /* BuDeJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E94E1FFF1DB23E9D00E23BE0 /* BuDeJieTests.m */; };
@@ -113,6 +122,9 @@
 		E9088D831DC0E3AF00C31CC3 /* LTVoiceTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVoiceTopicView.h; sourceTree = "<group>"; };
 		E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVoiceTopicView.m; sourceTree = "<group>"; };
 		E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTVoiceTopicView.xib; sourceTree = "<group>"; };
+		E9088D881DC0EB1800C31CC3 /* LTCommentTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCommentTopicView.h; sourceTree = "<group>"; };
+		E9088D891DC0EB1800C31CC3 /* LTCommentTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCommentTopicView.m; sourceTree = "<group>"; };
+		E9088D8B1DC0EB3100C31CC3 /* LTCommentTopicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTCommentTopicView.xib; sourceTree = "<group>"; };
 		E90960D01DB39A980068E79D /* UIImage+LTRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LTRender.h"; sourceTree = "<group>"; };
 		E90960D11DB39A980068E79D /* UIImage+LTRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LTRender.m"; sourceTree = "<group>"; };
 		E91C88FD1DB8D7E400988C6E /* LTSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSubTagViewController.h; sourceTree = "<group>"; };
@@ -163,6 +175,18 @@
 		E948A44A1DBB8A850072208E /* LTSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTSquareCell.xib; sourceTree = "<group>"; };
 		E948A44D1DBB95070072208E /* LTSquareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSquareItem.h; sourceTree = "<group>"; };
 		E948A44E1DBB95070072208E /* LTSquareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSquareItem.m; sourceTree = "<group>"; };
+		E94CF5431DC1953800629C60 /* LTCommentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTCommentItem.h; sourceTree = "<group>"; };
+		E94CF5441DC1953800629C60 /* LTCommentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTCommentItem.m; sourceTree = "<group>"; };
+		E94CF5461DC196A800629C60 /* LTUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTUserItem.h; sourceTree = "<group>"; };
+		E94CF5471DC196A800629C60 /* LTUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTUserItem.m; sourceTree = "<group>"; };
+		E94CF5491DC1C1FE00629C60 /* LTBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTBottomView.h; sourceTree = "<group>"; };
+		E94CF54A1DC1C1FE00629C60 /* LTBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTBottomView.m; sourceTree = "<group>"; };
+		E94CF54C1DC1C20D00629C60 /* LTBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTBottomView.xib; sourceTree = "<group>"; };
+		E94CF54E1DC1E42500629C60 /* NSDate+LTDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LTDate.h"; sourceTree = "<group>"; };
+		E94CF54F1DC1E42500629C60 /* NSDate+LTDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LTDate.m"; sourceTree = "<group>"; };
+		E94CF5511DC1F4FE00629C60 /* LTSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		E94CF5521DC1F4FE00629C60 /* LTSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		E94CF5531DC1F4FE00629C60 /* LTSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		E94E1FE21DB23E9D00E23BE0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E94E1FF11DB23E9D00E23BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E94E1FF41DB23E9D00E23BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -294,6 +318,8 @@
 				E97ECD771DB7444100DA17F3 /* AFHTTPSessionManager+LTManager.m */,
 				E948A4431DBB7C360072208E /* UITextField+LTPlaceholder.h */,
 				E948A4441DBB7C360072208E /* UITextField+LTPlaceholder.m */,
+				E94CF54E1DC1E42500629C60 /* NSDate+LTDate.h */,
+				E94CF54F1DC1E42500629C60 /* NSDate+LTDate.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -496,6 +522,9 @@
 				E944690C1DBCFA980034B089 /* ChildViewController */,
 				E94E20791DB25C9500E23BE0 /* LTEssenceViewController.h */,
 				E94E207A1DB25C9500E23BE0 /* LTEssenceViewController.m */,
+				E94CF5511DC1F4FE00629C60 /* LTSeeBigPictureViewController.h */,
+				E94CF5521DC1F4FE00629C60 /* LTSeeBigPictureViewController.m */,
+				E94CF5531DC1F4FE00629C60 /* LTSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -505,6 +534,10 @@
 			children = (
 				E9D8944D1DBF777000E3F2D9 /* LTTopicItem.h */,
 				E9D8944E1DBF777000E3F2D9 /* LTTopicItem.m */,
+				E94CF5431DC1953800629C60 /* LTCommentItem.h */,
+				E94CF5441DC1953800629C60 /* LTCommentItem.m */,
+				E94CF5461DC196A800629C60 /* LTUserItem.h */,
+				E94CF5471DC196A800629C60 /* LTUserItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -777,6 +810,12 @@
 				E9088D831DC0E3AF00C31CC3 /* LTVoiceTopicView.h */,
 				E9088D841DC0E3AF00C31CC3 /* LTVoiceTopicView.m */,
 				E9088D861DC0E3BA00C31CC3 /* LTVoiceTopicView.xib */,
+				E9088D881DC0EB1800C31CC3 /* LTCommentTopicView.h */,
+				E9088D891DC0EB1800C31CC3 /* LTCommentTopicView.m */,
+				E9088D8B1DC0EB3100C31CC3 /* LTCommentTopicView.xib */,
+				E94CF5491DC1C1FE00629C60 /* LTBottomView.h */,
+				E94CF54A1DC1C1FE00629C60 /* LTBottomView.m */,
+				E94CF54C1DC1C20D00629C60 /* LTBottomView.xib */,
 			);
 			path = CellChildView;
 			sourceTree = "<group>";
@@ -902,10 +941,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9088D8C1DC0EB3100C31CC3 /* LTCommentTopicView.xib in Resources */,
 				E94E1FF51DB23E9D00E23BE0 /* LaunchScreen.storyboard in Resources */,
 				E92ECDAB1DB64BF30071C1B7 /* LaunchImage-700-568h@2x.png in Resources */,
 				E948A44C1DBB8A850072208E /* LTSquareCell.xib in Resources */,
 				E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */,
+				E94CF54D1DC1C20D00629C60 /* LTBottomView.xib in Resources */,
 				E94E1FF21DB23E9D00E23BE0 /* Assets.xcassets in Resources */,
 				E94559B91DBA187D0079B985 /* LTFriendTrendViewController.xib in Resources */,
 				E92ECDAC1DB64BF30071C1B7 /* LaunchImage-700@2x.png in Resources */,
@@ -920,6 +961,7 @@
 				E9D894581DBF9AD900E3F2D9 /* LTPictureTopicView.xib in Resources */,
 				E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */,
 				E92ECDA11DB646F30071C1B7 /* LTADViewController.xib in Resources */,
+				E94CF5551DC1F4FE00629C60 /* LTSeeBigPictureViewController.xib in Resources */,
 				E94559C31DBA28380079B985 /* LTLoginRegisterView.xib in Resources */,
 				E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */,
 				E97ECD861DB7B4C800DA17F3 /* LTTagCell.xib in Resources */,
@@ -1075,6 +1117,7 @@
 				E97ECD7E1DB798DE00DA17F3 /* LTSubTagItem.m in Sources */,
 				E9D894461DBF701200E3F2D9 /* LTTopicCell.m in Sources */,
 				E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */,
+				E94CF5481DC196A800629C60 /* LTUserItem.m in Sources */,
 				E9D894531DBF899000E3F2D9 /* LTTopicViewModel.m in Sources */,
 				E94E207E1DB25CAE00E23BE0 /* LTFriendTrendViewController.m in Sources */,
 				E9088D851DC0E3AF00C31CC3 /* LTVoiceTopicView.m in Sources */,
@@ -1086,8 +1129,10 @@
 				E944690F1DBCFAC00034B089 /* LTAllViewController.m in Sources */,
 				E95F6D3A1DB3A5D900D3A77A /* UITabBarItem+LTFont.m in Sources */,
 				E9D8944A1DBF70DD00E3F2D9 /* LTTopTopicView.m in Sources */,
+				E9088D8A1DC0EB1800C31CC3 /* LTCommentTopicView.m in Sources */,
 				E9D8945B1DBF9B2F00E3F2D9 /* LTPictureTopicView.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,
+				E94CF54B1DC1C1FE00629C60 /* LTBottomView.m in Sources */,
 				E94469181DBCFAF20034B089 /* LTPictureViewController.m in Sources */,
 				E9088D801DC0D0C000C31CC3 /* LTVideoTopicView.m in Sources */,
 				E944690B1DBCE1E30034B089 /* LTFileManager.m in Sources */,
@@ -1098,6 +1143,8 @@
 				E948A44F1DBB95070072208E /* LTSquareItem.m in Sources */,
 				E948A44B1DBB8A850072208E /* LTSquareCell.m in Sources */,
 				E90960D21DB39A980068E79D /* UIImage+LTRender.m in Sources */,
+				E94CF5451DC1953800629C60 /* LTCommentItem.m in Sources */,
+				E94CF5501DC1E42500629C60 /* NSDate+LTDate.m in Sources */,
 				E94E20871DB25D3300E23BE0 /* LTMeViewController.m in Sources */,
 				E9477CB81DBDE51C00B410D7 /* LTBaseTabViewController.m in Sources */,
 				E94469151DBCFAE30034B089 /* LTVoiceViewController.m in Sources */,
@@ -1106,6 +1153,7 @@
 				E97ECD851DB7B4C800DA17F3 /* LTTagCell.m in Sources */,
 				E9D8944F1DBF777000E3F2D9 /* LTTopicItem.m in Sources */,
 				E94E20811DB25CD300E23BE0 /* LTTabBarController.m in Sources */,
+				E94CF5541DC1F4FE00629C60 /* LTSeeBigPictureViewController.m in Sources */,
 				E94559BC1DBA1CA80079B985 /* LTLoginViewController.m in Sources */,
 				E97ECD781DB7444100DA17F3 /* AFHTTPSessionManager+LTManager.m in Sources */,
 				E9D8945E1DBFA11100E3F2D9 /* LTBaseTopicView.m in Sources */,

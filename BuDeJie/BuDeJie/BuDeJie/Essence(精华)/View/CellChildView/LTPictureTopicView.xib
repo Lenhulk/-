@@ -11,6 +11,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96M-EO-H35">
+                    <rect key="frame" x="138" y="50" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="fEf-I9-iP6"/>
+                        <constraint firstAttribute="height" constant="100" id="kSx-L8-Ep4"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6CM-Iz-ZQ0">
                     <rect key="frame" x="113" y="10" width="150" height="30"/>
                     <constraints>
@@ -21,14 +29,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CBJ-0F-73O">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96M-EO-H35">
-                    <rect key="frame" x="138" y="50" width="100" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="fEf-I9-iP6"/>
-                        <constraint firstAttribute="height" constant="100" id="kSx-L8-Ep4"/>
-                    </constraints>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPR-yx-hc2">
                     <rect key="frame" x="0.0" y="160" width="375" height="40"/>
                     <constraints>

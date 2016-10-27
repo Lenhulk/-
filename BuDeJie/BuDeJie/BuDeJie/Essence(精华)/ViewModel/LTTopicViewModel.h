@@ -14,9 +14,9 @@
 
 @property (nonatomic, strong) LTTopicItem *item;
 
-@property (nonatomic, assign) CGRect middleViewFrame;
 @property (nonatomic, assign) CGRect topViewFrame;
 @property (nonatomic, assign) CGFloat cellH;
-
-
+@property (nonatomic, assign) CGRect middleViewFrame;
+@property (nonatomic, assign) CGRect commentViewFrame;
+@property (nonatomic, assign) CGRect bottomViewFrame;
 @end

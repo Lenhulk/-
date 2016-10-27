@@ -9,12 +9,12 @@
 #import "LTPictureTopicView.h"
 #import "LTTopicItem.h"
 #import "UIImageView+WebCache.h"
+#import "LTSeeBigPictureViewController.h"
 
 @interface LTPictureTopicView()
 @property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPicBtn;
-//@property (nonatomic, weak) DALabeledCircularProgressView *progressView;
 
 @end
 
@@ -23,20 +23,17 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     
-//    _progressView.progressTintColor = [UIColor redColor];
-//    _progressView.trackTintColor = [UIColor blueColor];
+//    _progressView.progressTintColor = [UIColor whiteColor];
+//    _progressView.trackTintColor = [UIColor lightGrayColor];
 //    _progressView.roundedCorners = 5;
-//    
-//    _progressView.progressLabel.textColor = [UIColor blackColor];
+//    _progressView.progressLabel.textColor = [UIColor whiteColor];
     
 }
 
 - (void)setItem:(LTTopicItem *)item{
     
-//    _progressView.progress = 0;
-//    _progressView.progressLabel.text = @"10%";
-    
     [super setItem:item];
+    
     _gifView.hidden = !item.is_gif;   //GIF标签
     _seeBigPicBtn.hidden = !item.is_bigPicture;  //大图按钮
     
@@ -46,13 +43,12 @@
         
         if (expectedSize == -1) return ;
         
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        LTLog(@"%f", progress);
+//        CGFloat progress = 1.0 * receivedSize / expectedSize;
+
         
-//        _progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100.0];
-//        [_progressView setProgress:progress animated:YES];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
-    } completed:nil];
+    }];
     
     
     if (item.is_bigPicture) {
@@ -66,4 +62,9 @@
  
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    LTSeeBigPictureViewController *seeBigPicVc = [[LTSeeBigPictureViewController alloc] init];
+    seeBigPicVc.item = self.item;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:seeBigPicVc animated:YES completion:nil];
+}
 @end
