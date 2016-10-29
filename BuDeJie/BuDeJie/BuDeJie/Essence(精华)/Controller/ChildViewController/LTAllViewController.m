@@ -11,14 +11,25 @@
 #import "LTTopicItem.h"
 #import <MJExtension/MJExtension.h>
 #import "LTTopicViewModel.h"
+#import "LTPhotoManager.h"
+#import <MJRefresh/MJRefresh.h>
 
 static NSString *const ID = @"cell";
 
 @interface LTAllViewController ()
 @property (nonatomic, strong) NSMutableArray *topicsVM;
+@property (nonatomic, strong) NSString *maxTime;
+@property (nonatomic, weak) AFHTTPSessionManager *mgr;
 @end
 
 @implementation LTAllViewController
+
+- (AFHTTPSessionManager *)mgr{
+    if (_mgr == nil) {
+        _mgr = [AFHTTPSessionManager lh_manager];
+    }
+    return _mgr;
+}
 
 - (NSMutableArray *)topicsVM{
     if (_topicsVM == nil) {
@@ -36,21 +47,49 @@ static NSString *const ID = @"cell";
     [self.tableView registerClass:[LTTopicCell class] forCellReuseIdentifier:ID];
     
     //网络数据
-    [self loadData];
+    [self loadNewData];
+    
+    //设置供拉动刷新的额外滚动范围
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
+    
+    //添加上下拉刷新
+    [self setupRefreshView];
 }
 
-- (void)loadData{
+- (void)setupRefreshView{
+    
+    //下拉刷新
+    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    refreshHeader.automaticallyChangeAlpha = YES;
+    self.tableView.mj_header = refreshHeader;
+    
+    //上拉加载
+    MJRefreshAutoNormalFooter *refreshFooter = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    refreshFooter.automaticallyHidden = YES;
+    self.tableView.mj_footer = refreshFooter;
+}
 
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager lh_manager];
+- (void)loadMoreData{
+    //取消之前的网络请求
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager lh_manager];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(LTTopicItemTypePicture);
+    parameters[@"maxtime"] = _maxTime;
     
-    [manager GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+    [self.mgr GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
-//        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/voice.plist" atomically:YES];
+        //        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/voice.plist" atomically:YES];
+        
+        //结束头部刷新
+        [self.tableView.mj_footer endRefreshing];
+        
+        //保存下一页的最大ID
+        _maxTime = responseObject[@"info"][@"maxtime"];
         
         //字典数组 转 模型数组
         NSArray *topics = [LTTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -61,6 +100,47 @@ static NSString *const ID = @"cell";
             topicVm.item = item;            //赋值，在set方法计算cell高度
             [self.topicsVM addObject:topicVm];  //保存记录VM
         }
+        
+        //刷新表格
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        LTLog(@"ERROR-%@", error);
+    }];
+}
+
+- (void)loadNewData{
+    //取消之前的网络请求
+    [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
+
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager lh_manager];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+    parameters[@"type"] = @(LTTopicItemTypePicture);
+    
+    [self.mgr GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
+        
+//        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/voice.plist" atomically:YES];
+        
+        //结束头部刷新
+        [self.tableView.mj_header endRefreshing];
+        
+        //保存下一页的最大ID
+        _maxTime = responseObject[@"info"][@"maxtime"];
+        
+        //字典数组 转 模型数组
+        NSArray *topics = [LTTopicItem mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        //模型 转 视图模型
+        NSMutableArray *arr = [NSMutableArray array];
+        for (LTTopicItem *item in topics) {
+            LTTopicViewModel *topicVm = [[LTTopicViewModel alloc] init];
+            topicVm.item = item;            //赋值，在set方法计算cell高度
+            [arr addObject:topicVm];  //保存新记录VM
+        }
+        self.topicsVM = arr;    //用新内容代替旧内容
         
         //刷新表格
         [self.tableView reloadData];
@@ -91,49 +171,5 @@ static NSString *const ID = @"cell";
     return [_topicsVM[indexPath.row] cellH] + 10;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

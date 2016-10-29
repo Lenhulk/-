@@ -12,6 +12,8 @@
 #import <SDImageCache.h>
 #import <SVProgressHUD.h>
 #import <Photos/Photos.h>
+#import "LTPhotoManager.h"
+
 #define LTPhotoAlbumTitle @"BaiSiBuDeSister"
 
 @interface LTSeeBigPictureViewController ()<UIScrollViewDelegate>
@@ -20,6 +22,8 @@
 @end
 
 @implementation LTSeeBigPictureViewController
+
+#pragma mark - 保存图片
 
 - (IBAction)saveClick:(id)sender {
     
@@ -35,60 +39,33 @@
         //如果不确定 申请权限
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             if (status == PHAuthorizationStatusAuthorized) {
-                [self savePhoto];
+                
+//                [self savePhoto];
+                [LTPhotoManager savePhoto:_imageView.image albumTitle:LTPhotoAlbumTitle completionHandler:^(BOOL success, NSError *error) {
+                    if (error) {
+                        [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"保存错误：%@", error]];
+                    } else {
+                        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+                    }
+                }];
             }
         }];
     } else if (status == PHAuthorizationStatusAuthorized){
-        [self savePhoto];
+//        [self savePhoto];
+        
+        [LTPhotoManager savePhoto:_imageView.image albumTitle:LTPhotoAlbumTitle completionHandler:^(BOOL success, NSError *error) {
+            if (error) {
+                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"保存错误：%@", error]];
+            } else {
+                [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+            }
+        }];
+        
     } else {
         //受限制
         [SVProgressHUD showInfoWithStatus:@"进入设置界面->找到当前应用->打开允许访问相册的开关"];
     }
 
-}
-
-- (void)savePhoto{
-    
-    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        
-        //创建自定义相册
-//        PHAssetCollectionChangeRequest *collectionRequest = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:@"BaiSiBuDeSister"];
-        
-        //获取之前的相册
-        PHAssetCollection *assetCollection = [self fetchAssetCollection:LTPhotoAlbumTitle];
-        PHAssetCollectionChangeRequest *request;    //创建请求
-        if (assetCollection) {  //已有相册
-            request = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:assetCollection];
-        } else {    //未创建该相册
-            request = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:LTPhotoAlbumTitle];
-        }
-        //保存图片到系统相册
-        PHAssetChangeRequest *assetRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:_imageView.image];
-        //定义占位图片保存到自定义的相册
-        PHObjectPlaceholder *placeHolder = [assetRequest placeholderForCreatedAsset];
-        //用将要保存的图片替换占位图片
-        [request addAssets:@[placeHolder]];
-        
-    } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        
-        if (error) {
-            [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"保存错误：%@", error]];
-        } else {
-            [SVProgressHUD showSuccessWithStatus:@"保存成功"];
-        }
-    }];
-}
-//获取之前的相册
-- (PHAssetCollection *)fetchAssetCollection:(NSString *)collectionTitle{
-    
-    PHFetchResult *fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
-    
-    for (PHAssetCollection *assetCollection in fetchResult) {
-        if ([assetCollection.localizedTitle isEqualToString:LTPhotoAlbumTitle]) {
-            return assetCollection;
-        }
-    }
-    return nil;
 }
 
 //保存图片完成时调用
@@ -100,10 +77,12 @@
 //    }
 //}
 
+#pragma mark - 跳转
 - (IBAction)dismissClick:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - ViewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -116,7 +95,7 @@
     
     CGFloat h = KScreenW / _item.width * _item.height;
     imageView.frame = CGRectMake(0, 0, KScreenW, h);
-    
+ /*
     if (_item.is_bigPicture) {
         _scrollView.contentSize = CGSizeMake(0, h);
         _scrollView.delegate = self;
@@ -125,13 +104,22 @@
     } else {
         imageView.center = CGPointMake(KScreenW * 0.5, KScreenH * 0.5);
     }
+ */
+    //设置滚动范围和缩放比例
+    _scrollView.contentSize = CGSizeMake(0, h);
+    _scrollView.delegate = self;
+    _scrollView.maximumZoomScale = 3.0;
+    _scrollView.minimumZoomScale = 0.3;
+    
+    if (_item.is_bigPicture) {
+        _scrollView.contentSize = CGSizeMake(0, h);
+    } else {
+        imageView.center = CGPointMake(KScreenW * 0.5, KScreenH * 0.5);
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark - ViewForZooming
+//返回需要缩放的子控件
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return _imageView;
 }
