@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="GmB-nj-idU" customClass="LTHeaderRefreshView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你再下拉我就刷新了！" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdp-Ko-krc">
+                    <rect key="frame" x="133" y="15" width="170" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="gFQ-Ft-TnB">
+                    <rect key="frame" x="88" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="UJi-uO-k8O"/>
+                        <constraint firstAttribute="height" constant="40" id="z57-0h-QBD"/>
+                    </constraints>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84o-iO-FMF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卖力加载数据中..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-h2-l3i">
+                            <rect key="frame" x="135" y="15" width="126" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-Lw-YiK">
+                            <rect key="frame" x="105" y="15" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="mpy-Lw-YiK" firstAttribute="centerY" secondItem="84o-iO-FMF" secondAttribute="centerY" id="L5A-7k-j36"/>
+                        <constraint firstItem="ieg-h2-l3i" firstAttribute="centerX" secondItem="84o-iO-FMF" secondAttribute="centerX" constant="10" id="fIf-pP-q16"/>
+                        <constraint firstItem="ieg-h2-l3i" firstAttribute="centerY" secondItem="84o-iO-FMF" secondAttribute="centerY" id="uQp-6j-iVN"/>
+                        <constraint firstItem="ieg-h2-l3i" firstAttribute="leading" secondItem="mpy-Lw-YiK" secondAttribute="trailing" constant="10" id="uyD-K5-42H"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="84o-iO-FMF" firstAttribute="top" secondItem="GmB-nj-idU" secondAttribute="top" id="495-ef-Z52"/>
+                <constraint firstAttribute="bottom" secondItem="84o-iO-FMF" secondAttribute="bottom" id="Cbz-Gn-dyV"/>
+                <constraint firstItem="gFQ-Ft-TnB" firstAttribute="centerY" secondItem="GmB-nj-idU" secondAttribute="centerY" id="Cju-uc-tqH"/>
+                <constraint firstItem="gFQ-Ft-TnB" firstAttribute="centerX" secondItem="GmB-nj-idU" secondAttribute="centerX" constant="-80" id="Erp-VN-FYu"/>
+                <constraint firstItem="84o-iO-FMF" firstAttribute="leading" secondItem="GmB-nj-idU" secondAttribute="leading" id="Xsa-Ip-2Zo"/>
+                <constraint firstItem="pdp-Ko-krc" firstAttribute="centerY" secondItem="GmB-nj-idU" secondAttribute="centerY" id="mWb-Wu-xQR"/>
+                <constraint firstItem="pdp-Ko-krc" firstAttribute="centerX" secondItem="GmB-nj-idU" secondAttribute="centerX" constant="30" id="nnG-v4-DKE"/>
+                <constraint firstAttribute="trailing" secondItem="84o-iO-FMF" secondAttribute="trailing" id="w8o-Cm-A8c"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrowImageView" destination="gFQ-Ft-TnB" id="XWk-W6-52Z"/>
+                <outlet property="labelView" destination="pdp-Ko-krc" id="Se7-PW-qwR"/>
+                <outlet property="loadView" destination="84o-iO-FMF" id="ufF-QI-VeR"/>
+            </connections>
+            <point key="canvasLocation" x="277.5" y="214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="46" height="48"/>
+    </resources>
+</document>

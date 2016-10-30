@@ -113,6 +113,7 @@
      } else {   //段子
          _videoView.hidden = YES;
          _pictureView.hidden = YES;
+         _voiceView.hidden = YES;
      }
     
     //Comment

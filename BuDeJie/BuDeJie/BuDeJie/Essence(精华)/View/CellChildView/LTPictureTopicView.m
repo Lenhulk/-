@@ -25,10 +25,10 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     
-    _progressView.progressTintColor = [UIColor whiteColor];
-    _progressView.progressLabel.textColor = [UIColor whiteColor];
+    _progressView.progressTintColor = [UIColor orangeColor];
+    _progressView.progressLabel.textColor = [UIColor orangeColor];
     _progressView.trackTintColor = [UIColor blackColor];
-    _progressView.roundedCorners = 5;
+//    _progressView.roundedCorners = 5;
     
 }
 
