@@ -13,6 +13,7 @@
 #import "AFHTTPSessionManager+LTManager.h"
 #import "UITextField+LTPlaceholder.h"
 
+#define CachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 #define KBaseURL @"http://api.budejie.com/api/api_open.php"
 #define KScreenH [UIScreen mainScreen].bounds.size.height
 #define KScreenW [UIScreen mainScreen].bounds.size.width

@@ -11,4 +11,5 @@
 
 @interface LTBaseTopicViewController : UITableViewController
 @property (nonatomic, strong) NSNumber *type;
+- (void)reload;
 @end

@@ -7,13 +7,17 @@
 //
 
 #import "LTBaseTopicViewController.h"
+#import "LTNewViewController.h"
 #import "LTTopicCell.h"
 
 #import <MJExtension/MJExtension.h>
 #import "LTTopicViewModel.h"
 #import "LTPhotoManager.h"
+
+#import <MJRefresh/MJRefresh.h>
 #import "LTFooterRefreshView.h"
 #import "LTHeaderRefreshView.h"
+
 
 static NSString *const ID = @"cell";
 
@@ -41,6 +45,11 @@ static NSString *const ID = @"cell";
     return _topicsVM;
 }
 
+//刷新页面
+- (void)reload{
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -58,77 +67,83 @@ static NSString *const ID = @"cell";
     _oriInsets = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     
     //添加刷新控件
-    [self setupFootRefreshView];
-    [self setupHeadRefreshView];
+    [self setupRefreshView];
+//    [self setupFootRefreshView];
+//    [self setupHeadRefreshView];
     
 }
 
-- (void)setupHeadRefreshView{
-    LTHeaderRefreshView *headerView = [LTHeaderRefreshView headerRefreshView];
-    headerView.lh_y = -headerView.lh_height;
-    _headerRefreshView = headerView;
-    [self.tableView addSubview:headerView];
-}
-
-- (void)setupFootRefreshView{
-    LTFooterRefreshView *footerView = [LTFooterRefreshView footerRefreshView];
-    footerView.isRefreshing = NO;
-    _footerRefreshView = footerView;
-    self.tableView.tableFooterView = footerView;
-}
-
-#pragma mark - ScrollView Delegate
-//在拉动的时候实现刷新
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    // 处理上拉控件
-    [self dealFootRefreshView];
-    // 处理下拉控件
-    [self dealHeaderRefreshView];
-}
-
-- (void)dealHeaderRefreshView{
-    //计算偏移量
-    CGFloat offsetY = self.tableView.contentOffset.y;   //负值
-    CGFloat fullViewY = self.tableView.contentInset.top + _headerRefreshView.lh_height;     //HeaderView完全显示时的偏移量
+- (void)setupRefreshView{
+    MJRefreshNormalHeader *headerView = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    headerView.automaticallyChangeAlpha = YES;
+    self.tableView.mj_header = headerView;
     
-    //计算透明度，设置渐变透明
-    CGFloat a = -(99.0 + offsetY) * 0.02;
-    self.headerRefreshView.alpha = a;
-    
-    //是否需要加载数据
-    if (-offsetY >= fullViewY) {    //HeaderView完全显示
-        _headerRefreshView.isNeedLoading = YES;
-    } else {
-        _headerRefreshView.isNeedLoading = NO;
-    }
+    MJRefreshAutoNormalFooter *footerView = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    footerView.automaticallyHidden = YES;
+    self.tableView.mj_footer = footerView;
 }
 
-- (void)dealFootRefreshView{
-    if (self.topicsVM.count == 0) return;   //没有数据的时候，控件不出现（加载前隐藏）
-    if (_footerRefreshView.isRefreshing == YES) return;   //正在加载数据的时候不加载
-    //判断控件是否全部显示
-    CGFloat offsetY = self.tableView.contentOffset.y;
-    if (offsetY > self.tableView.contentSize.height + self.tableView.contentInset.bottom - KScreenH) {
-        _footerRefreshView.isRefreshing = YES;
-        [self loadMoreData];
-    }
-}
-
+/*
+//- (void)setupHeadRefreshView{
+//    LTHeaderRefreshView *headerView = [LTHeaderRefreshView headerRefreshView];
+//    headerView.lh_y = -headerView.lh_height;
+//    _headerRefreshView = headerView;
+//    [self.tableView addSubview:headerView];
+//}
+//
+//- (void)setupFootRefreshView{
+//    LTFooterRefreshView *footerView = [LTFooterRefreshView footerRefreshView];
+//    footerView.isRefreshing = NO;
+//    _footerRefreshView = footerView;
+//    self.tableView.tableFooterView = footerView;
+//}
+//#pragma mark - ScrollView Delegate
+////在拉动的时候实现刷新
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    // 处理上拉控件
+//    [self dealFootRefreshView];
+//    // 处理下拉控件
+//    [self dealHeaderRefreshView];
+//}
+//- (void)dealHeaderRefreshView{
+//    //计算偏移量
+//    CGFloat offsetY = self.tableView.contentOffset.y;   //负值
+//    CGFloat fullViewY = self.tableView.contentInset.top + _headerRefreshView.lh_height;     //HeaderView完全显示时的偏移量
+//    
+//    //计算透明度，设置渐变透明
+//    CGFloat a = -(99.0 + offsetY) * 0.02;
+//    self.headerRefreshView.alpha = a;
+//    
+//    //是否需要加载数据
+//    if (-offsetY >= fullViewY) {    //HeaderView完全显示
+//        _headerRefreshView.isNeedLoading = YES;
+//    } else {
+//        _headerRefreshView.isNeedLoading = NO;
+//    }
+//}
+//- (void)dealFootRefreshView{
+//    if (self.topicsVM.count == 0) return;   //没有数据的时候，控件不出现（加载前隐藏）
+//    if (_footerRefreshView.isRefreshing == YES) return;   //正在加载数据的时候不加载
+//    //判断控件是否全部显示
+//    CGFloat offsetY = self.tableView.contentOffset.y;
+//    if (offsetY > self.tableView.contentSize.height + self.tableView.contentInset.bottom - KScreenH) {
+//        _footerRefreshView.isRefreshing = YES;
+//        [self loadMoreData];
+//    }
+//}
 //松开手指才刷新数据，悬停效果
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    if (_headerRefreshView.isNeedLoading) {
-        _headerRefreshView.isRefreshing = YES;
-        //悬停：设置额外滚动区域
-        [UIView animateWithDuration:0.5 animations:^{
-            self.tableView.contentInset = UIEdgeInsetsMake(_oriInsets.top + _headerRefreshView.lh_height, 0, _oriInsets.bottom, 0);
-        }];
-        [self loadNewData];
-        _headerRefreshView.isNeedLoading = NO;
-    }
-}
-
-
-
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    if (_headerRefreshView.isNeedLoading) {
+//        _headerRefreshView.isRefreshing = YES;
+//        //悬停：设置额外滚动区域
+//        [UIView animateWithDuration:0.5 animations:^{
+//            self.tableView.contentInset = UIEdgeInsetsMake(_oriInsets.top + _headerRefreshView.lh_height, 0, _oriInsets.bottom, 0);
+//        }];
+//        [self loadNewData];
+//        _headerRefreshView.isNeedLoading = NO;
+//    }
+//}
+*/
 
 #pragma mark - LoadData
 
@@ -136,22 +151,26 @@ static NSString *const ID = @"cell";
     //取消之前的网络请求
     [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
     
-    //    AFHTTPSessionManager *manager = [AFHTTPSessionManager lh_manager];
-    
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    //判断是否是新帖控制器
+    NSString * a = @"list";
+    if ([self.parentViewController isKindOfClass:[LTNewViewController class]]) {
+        a = @"newlist";
+    }
+    parameters[@"a"] = a;
+//    parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
     parameters[@"type"] = self.type;
     
     [self.mgr GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
         //结束刷新
-        //        [self.tableView.mj_header endRefreshing];
-        [UIView animateWithDuration:0.5 animations:^{
-            self.tableView.contentInset = _oriInsets;
-        }];
-        _headerRefreshView.isRefreshing = NO;
-        _footerRefreshView.hidden = NO;
+        [self.tableView.mj_header endRefreshing];
+//        [UIView animateWithDuration:0.5 animations:^{
+//            self.tableView.contentInset = _oriInsets;
+//        }];
+//        _headerRefreshView.isRefreshing = NO;
+//        _footerRefreshView.hidden = NO;
         
         //保存下一页的最大ID
         _maxTime = responseObject[@"info"][@"maxtime"];
@@ -180,16 +199,21 @@ static NSString *const ID = @"cell";
     [self.mgr.tasks makeObjectsPerformSelector:@selector(cancel)];
     
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    NSString * a = @"list";
+    if ([self.parentViewController isKindOfClass:[LTNewViewController class]]) {
+        a = @"newlist";
+    }
+    parameters[@"a"] = a;
+//    parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = self.type;
+    parameters[@"type"] = _type;
     parameters[@"maxtime"] = _maxTime;
     
     [self.mgr GET:KBaseURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *_Nullable responseObject) {
         
         //结束尾部刷新
-        //        [self.tableView.mj_footer endRefreshing];
-        _footerRefreshView.isRefreshing = NO;
+        [self.tableView.mj_footer endRefreshing];
+//        _footerRefreshView.isRefreshing = NO;
         
         //保存下一页的最大ID
         _maxTime = responseObject[@"info"][@"maxtime"];

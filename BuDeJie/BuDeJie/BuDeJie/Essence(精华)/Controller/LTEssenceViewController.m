@@ -8,7 +8,13 @@
 
 #import "LTEssenceViewController.h"
 #import "LTBaseTopicViewController.h"
-#import "LTTopicItem.h"
+
+#import "LTAllViewController.h"
+#import "LTPictureViewController.h"
+#import "LTTextViewController.h"
+#import "LTVoiceViewController.h"
+#import "LTVideoViewController.h"
+
 @interface LTEssenceViewController ()
 
 @end
@@ -33,29 +39,29 @@
 
 - (void)setupAllChildViewController{
     
-    LTBaseTopicViewController *allVc = [[LTBaseTopicViewController alloc] init];
+    LTAllViewController *allVc = [[LTAllViewController alloc] init];
     allVc.title = @"所有";
     allVc.type = @(LTTopicItemTypeAll);
     [self addChildViewController:allVc];
     
-    LTBaseTopicViewController *videoVc = [[LTBaseTopicViewController alloc] init];
+    LTVideoViewController *videoVc = [[LTVideoViewController alloc] init];
     videoVc.title = @"视频";
-    videoVc.type = @(LTTopicItemTypeVideo);
+//    videoVc.type = @(LTTopicItemTypeVideo);
     [self addChildViewController:videoVc];
     
-    LTBaseTopicViewController *voiceVc = [[LTBaseTopicViewController alloc] init];
+    LTVoiceViewController *voiceVc = [[LTVoiceViewController alloc] init];
     voiceVc.title = @"声音";
-    videoVc.type = @(LTTopicItemTypeVoice);
+//    videoVc.type = @(LTTopicItemTypeVoice);
     [self addChildViewController:voiceVc];
     
-    LTBaseTopicViewController *pictureVc = [[LTBaseTopicViewController alloc] init];
+    LTPictureViewController *pictureVc = [[LTPictureViewController alloc] init];
     pictureVc.title = @"图片";
     videoVc.type = @(LTTopicItemTypePicture);
     [self addChildViewController:pictureVc];
     
-    LTBaseTopicViewController *textVc = [[LTBaseTopicViewController alloc] init];
+    LTTextViewController *textVc = [[LTTextViewController alloc] init];
     textVc.title = @"段子";
-    videoVc.type = @(LTTopicItemTypeText);
+//    videoVc.type = @(LTTopicItemTypeText);
     [self addChildViewController:textVc];
 }
 

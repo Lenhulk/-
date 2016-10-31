@@ -27,7 +27,7 @@
     _isNeedLoading = isNeedLoading;
     _labelView.text = isNeedLoading?@"松开手我就刷新":@"你再下拉我就刷新了";
     [UIView animateWithDuration:0.25 animations:^{
-        _arrowImageView.transform = isNeedLoading?CGAffineTransformMakeRotation(M_PI):CGAffineTransformIdentity;
+        _arrowImageView.transform = isNeedLoading?CGAffineTransformMakeRotation(M_PI + 0.0001):CGAffineTransformIdentity;
     }];
 }
 

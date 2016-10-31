@@ -7,6 +7,7 @@
 //
 
 #import "LTBaseTabViewController.h"
+#import "LTBaseTopicViewController.h"
 
 @interface LTBaseTabViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -47,6 +48,8 @@ static NSString * const ID = @"CollectionCell";
 
     //取消自动添加额外的滚动区域
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    
 }
 
 //view将要显示的时候才加载
@@ -69,6 +72,9 @@ static NSString * const ID = @"CollectionCell";
     
     UICollectionView *collectionV = [[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
     collectionV.backgroundColor = [UIColor lightGrayColor];
+    
+    //XCode8新特性，取消这个属性可以防止离屏渲染，同时解决了重复点击Tabbutton不刷新页面的问题
+    collectionV.prefetchingEnabled = NO;
     
     collectionV.showsVerticalScrollIndicator = NO;
     collectionV.showsHorizontalScrollIndicator = NO;
@@ -182,9 +188,21 @@ static NSString * const ID = @"CollectionCell";
 #pragma mark - TitleButtonClick事件
 
 - (void)titleBtnClick:(UIButton *)btn{
-    [self selectedButton:btn];
-    //点击按钮切换到对应的页面
+    
     NSInteger i = btn.tag;
+    
+    //判断重复点击
+    if (btn == _selBtn) {
+        //获取当前控制器->刷新
+        LTBaseTopicViewController *topicVc = self.childViewControllers[i];
+//        LTLog(@"%@重复点击了按钮", topicVc);
+        [topicVc reload];
+    }
+    
+    //记录选择按钮
+    [self selectedButton:btn];
+    
+    //点击按钮切换到对应的页面
     CGFloat offset = i * KScreenW;
     self.bottomCollectionView.contentOffset = CGPointMake(offset, 0);
     

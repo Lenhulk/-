@@ -26,6 +26,11 @@
 		E92ECDAE1DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		E92ECDAF1DB64BF30071C1B7 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */; };
 		E92ECDB01DB64BF30071C1B7 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */; };
+		E937919D1DC730D60039ABE0 /* LTTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E937919C1DC730D60039ABE0 /* LTTextViewController.m */; };
+		E93791A01DC734740039ABE0 /* LTVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E937919F1DC734740039ABE0 /* LTVoiceViewController.m */; };
+		E93791A31DC737C50039ABE0 /* LTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93791A21DC737C50039ABE0 /* LTVideoViewController.m */; };
+		E93791A61DC73A4D0039ABE0 /* LTAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93791A51DC73A4D0039ABE0 /* LTAllViewController.m */; };
+		E93791A91DC73A740039ABE0 /* LTPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93791A81DC73A740039ABE0 /* LTPictureViewController.m */; };
 		E94469041DBC82EF0034B089 /* LTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E94469021DBC82EF0034B089 /* LTWebViewController.m */; };
 		E94469051DBC82EF0034B089 /* LTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E94469031DBC82EF0034B089 /* LTWebViewController.xib */; };
 		E944690B1DBCE1E30034B089 /* LTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E944690A1DBCE1E30034B089 /* LTFileManager.m */; };
@@ -140,6 +145,16 @@
 		E92ECDA71DB64BF30071C1B7 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		E92ECDA81DB64BF30071C1B7 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		E92ECDA91DB64BF30071C1B7 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
+		E937919B1DC730D60039ABE0 /* LTTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewController.h; sourceTree = "<group>"; };
+		E937919C1DC730D60039ABE0 /* LTTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewController.m; sourceTree = "<group>"; };
+		E937919E1DC734740039ABE0 /* LTVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVoiceViewController.h; sourceTree = "<group>"; };
+		E937919F1DC734740039ABE0 /* LTVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVoiceViewController.m; sourceTree = "<group>"; };
+		E93791A11DC737C50039ABE0 /* LTVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoViewController.h; sourceTree = "<group>"; };
+		E93791A21DC737C50039ABE0 /* LTVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoViewController.m; sourceTree = "<group>"; };
+		E93791A41DC73A4D0039ABE0 /* LTAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTAllViewController.h; sourceTree = "<group>"; };
+		E93791A51DC73A4D0039ABE0 /* LTAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTAllViewController.m; sourceTree = "<group>"; };
+		E93791A71DC73A740039ABE0 /* LTPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPictureViewController.h; sourceTree = "<group>"; };
+		E93791A81DC73A740039ABE0 /* LTPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPictureViewController.m; sourceTree = "<group>"; };
 		E94469011DBC82EF0034B089 /* LTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTWebViewController.h; sourceTree = "<group>"; };
 		E94469021DBC82EF0034B089 /* LTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTWebViewController.m; sourceTree = "<group>"; };
 		E94469031DBC82EF0034B089 /* LTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTWebViewController.xib; sourceTree = "<group>"; };
@@ -396,6 +411,16 @@
 		E944690C1DBCFA980034B089 /* ChildViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E937919B1DC730D60039ABE0 /* LTTextViewController.h */,
+				E937919C1DC730D60039ABE0 /* LTTextViewController.m */,
+				E937919E1DC734740039ABE0 /* LTVoiceViewController.h */,
+				E937919F1DC734740039ABE0 /* LTVoiceViewController.m */,
+				E93791A11DC737C50039ABE0 /* LTVideoViewController.h */,
+				E93791A21DC737C50039ABE0 /* LTVideoViewController.m */,
+				E93791A71DC73A740039ABE0 /* LTPictureViewController.h */,
+				E93791A81DC73A740039ABE0 /* LTPictureViewController.m */,
+				E93791A41DC73A4D0039ABE0 /* LTAllViewController.h */,
+				E93791A51DC73A4D0039ABE0 /* LTAllViewController.m */,
 			);
 			path = ChildViewController;
 			sourceTree = "<group>";
@@ -1129,6 +1154,7 @@
 				E9D894461DBF701200E3F2D9 /* LTTopicCell.m in Sources */,
 				E94664C01DC4AF0F0080846B /* LTPhotoManager.m in Sources */,
 				E94559C61DBA48D50079B985 /* LTFastLoginButton.m in Sources */,
+				E93791A61DC73A4D0039ABE0 /* LTAllViewController.m in Sources */,
 				E94CF5481DC196A800629C60 /* LTUserItem.m in Sources */,
 				E95BC8D01DC61B49006F60F3 /* LTBaseTopicViewController.m in Sources */,
 				E9D894531DBF899000E3F2D9 /* LTTopicViewModel.m in Sources */,
@@ -1142,6 +1168,7 @@
 				E9D8944A1DBF70DD00E3F2D9 /* LTTopTopicView.m in Sources */,
 				E9088D8A1DC0EB1800C31CC3 /* LTCommentTopicView.m in Sources */,
 				E9D8945B1DBF9B2F00E3F2D9 /* LTPictureTopicView.m in Sources */,
+				E93791A01DC734740039ABE0 /* LTVoiceViewController.m in Sources */,
 				E95EECB61DB4701D00B2A505 /* UIView+LTFrame.m in Sources */,
 				E94CF54B1DC1C1FE00629C60 /* LTBottomView.m in Sources */,
 				E9088D801DC0D0C000C31CC3 /* LTVideoTopicView.m in Sources */,
@@ -1168,9 +1195,12 @@
 				E97ECD781DB7444100DA17F3 /* AFHTTPSessionManager+LTManager.m in Sources */,
 				E9D8945E1DBFA11100E3F2D9 /* LTBaseTopicView.m in Sources */,
 				E95EECB31DB46B4A00B2A505 /* LTSettingViewController.m in Sources */,
+				E937919D1DC730D60039ABE0 /* LTTextViewController.m in Sources */,
 				E94E20751DB2573700E23BE0 /* AppDelegate.m in Sources */,
 				E95EECAC1DB468A400B2A505 /* LTNavigationController.m in Sources */,
+				E93791A31DC737C50039ABE0 /* LTVideoViewController.m in Sources */,
 				E91C88FF1DB8D7E400988C6E /* LTSubTagViewController.m in Sources */,
+				E93791A91DC73A740039ABE0 /* LTPictureViewController.m in Sources */,
 				E97ECD7B1DB7495E00DA17F3 /* LTADItem.m in Sources */,
 				E94469041DBC82EF0034B089 /* LTWebViewController.m in Sources */,
 			);

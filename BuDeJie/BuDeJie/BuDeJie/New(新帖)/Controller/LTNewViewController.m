@@ -8,8 +8,13 @@
 
 #import "LTNewViewController.h"
 #import "LTSubTagViewController.h"
+#import "LTBaseTopicViewController.h"
 
-
+#import "LTAllViewController.h"
+#import "LTPictureViewController.h"
+#import "LTTextViewController.h"
+#import "LTVoiceViewController.h"
+#import "LTVideoViewController.h"
 
 @interface LTNewViewController ()
 
@@ -21,6 +26,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor greenColor];
+    
     [self setupNavBar];
     
     [self setupAllChildViewController];
@@ -39,8 +45,25 @@
 }
 
 - (void)setupAllChildViewController{
+    LTAllViewController *allVc = [[LTAllViewController alloc] init];
+    allVc.title = @"所有";
+    [self addChildViewController:allVc];
     
-
+    LTVideoViewController *videoVc = [[LTVideoViewController alloc] init];
+    videoVc.title = @"视频";
+    [self addChildViewController:videoVc];
+    
+    LTVoiceViewController *voiceVc = [[LTVoiceViewController alloc] init];
+    voiceVc.title = @"声音";
+    [self addChildViewController:voiceVc];
+    
+    LTPictureViewController *pictureVc = [[LTPictureViewController alloc] init];
+    pictureVc.title = @"图片";
+    [self addChildViewController:pictureVc];
+    
+    LTTextViewController *textVc = [[LTTextViewController alloc] init];
+    textVc.title = @"段子";
+    [self addChildViewController:textVc];
 }
 
 @end

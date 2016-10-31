@@ -33,8 +33,10 @@
 }
 
 - (void)setItem:(LTTopicItem *)item{
-    
     [super setItem:item];
+    
+    //先去沙盒找有没有已保存的图片
+    
     
         //防止cell重用
     _progressView.progress = 0;
