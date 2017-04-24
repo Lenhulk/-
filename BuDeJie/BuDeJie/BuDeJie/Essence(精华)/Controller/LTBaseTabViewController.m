@@ -80,6 +80,7 @@ static NSString * const ID = @"CollectionCell";
     collectionV.showsHorizontalScrollIndicator = NO;
     collectionV.bounces = NO;
     collectionV.pagingEnabled = YES;
+    collectionV.scrollsToTop = NO;
     
     collectionV.dataSource = self;
     collectionV.delegate = self;
@@ -94,7 +95,7 @@ static NSString * const ID = @"CollectionCell";
     CGFloat y = self.navigationController.navigationBarHidden==YES?20:64;
     
     UIScrollView *scrollV = [[UIScrollView alloc] initWithFrame:CGRectMake(0, y, KScreenW, 35)];
-    
+    scrollV.scrollsToTop = NO;
     scrollV.backgroundColor = [UIColor colorWithWhite:1 alpha:0.6];
     
     [self.view addSubview:scrollV];

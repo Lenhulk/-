@@ -11,7 +11,6 @@
 #import "LTFileManager.h"
 #import <SVProgressHUD.h>
 
-#define KCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject]
 static NSString * const ID = @"cell";
 
 @interface LTSettingViewController ()
@@ -27,6 +26,9 @@ static NSString * const ID = @"cell";
     [SVProgressHUD showWithStatus:@"正在计算缓存大小..."];
     
     [LTFileManager directorySizeString:KCachePath completion:^(NSString *str) {
+        
+        LTLog(@"%@", KCachePath);
+        
         [SVProgressHUD dismiss];
         _str = str;
         [self.tableView reloadData];
@@ -34,13 +36,6 @@ static NSString * const ID = @"cell";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - Table view data source
 
@@ -64,9 +59,10 @@ static NSString * const ID = @"cell";
     
 //    [LTFileManager removeDirectoryPath:@"nimei"];//测试容错处理
     
-    if(indexPath.section == 0) [LTFileManager removeDirectoryPath:KCachePath];
+    if(indexPath.section == 0)
+        [LTFileManager removeDirectoryPath:KCachePath];
     
-    _str = @"清理缓存";
+    _str = @"缓存清理完毕";
     
     //刷新表格
     [self.tableView reloadData];
