@@ -7,7 +7,20 @@
 //
 
 #import "LTAVPlayerManager.h"
+#import <AVFoundation/AVFoundation.h>
+
+@interface LTAVPlayerManager ()
+@property (nonatomic, strong) AVAudioPlayer *player;
+@end
 
 @implementation LTAVPlayerManager
+
+//+ (AVAudioPlayer *)avPlayerManager{
+//    if (_player == nil) {
+//        _player = [[AVPlayer alloc] init];
+//    }
+//    return _player;
+//}
+
 
 @end

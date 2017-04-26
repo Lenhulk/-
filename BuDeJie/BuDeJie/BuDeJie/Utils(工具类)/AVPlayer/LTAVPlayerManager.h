@@ -10,4 +10,6 @@
 
 @interface LTAVPlayerManager : NSObject
 
+//+ (AVAudioPlayer *)avPlayerManager;
+
 @end

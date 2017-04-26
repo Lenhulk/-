@@ -36,6 +36,7 @@
     
     [super viewDidLoad];
     
+    
     LTLoginRegisterView *loginV = [LTLoginRegisterView loginView];
     [_middleView addSubview:loginV];
     

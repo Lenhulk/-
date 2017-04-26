@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LTCategoryItem;
 @interface LTCategoryCell : UITableViewCell
-
+@property (nonatomic, strong) LTCategoryItem *categoryItem;
 @end

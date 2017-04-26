@@ -39,7 +39,6 @@
         //如果不确定 申请权限
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             if (status == PHAuthorizationStatusAuthorized) {
-                
 //                [self savePhoto];
                 [LTPhotoManager savePhoto:_imageView.image albumTitle:LTPhotoAlbumTitle completionHandler:^(BOOL success, NSError *error) {
                     if (error) {
@@ -52,7 +51,6 @@
         }];
     } else if (status == PHAuthorizationStatusAuthorized){
 //        [self savePhoto];
-        
         [LTPhotoManager savePhoto:_imageView.image albumTitle:LTPhotoAlbumTitle completionHandler:^(BOOL success, NSError *error) {
             if (error) {
                 [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"保存错误：%@", error]];
@@ -89,7 +87,12 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     _imageView = imageView;
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:_item.image0]];
+    //如果有自己保存的裁剪的大图就用自己的
+    if (_item.localImage){
+        _imageView.image = _item.localImage;
+    } else {
+        [imageView sd_setImageWithURL:[NSURL URLWithString:_item.image0]];
+    }
     
     [_scrollView addSubview:imageView];
     

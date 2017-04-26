@@ -161,7 +161,6 @@ static CGFloat const margin = 1;
         webVc.url = url;
         [self.navigationController pushViewController:webVc animated:YES];
     }
-    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

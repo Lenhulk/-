@@ -30,7 +30,6 @@
 - (void)setupNavBar{
     //标题
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    
     //左边
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"nav_item_game_icon"] hightLightImage:[UIImage imageNamed:@"nav_item_game_click_icon"] target:self action:@selector(gameClick)];
     //右边
@@ -41,7 +40,7 @@
     
     LTAllViewController *allVc = [[LTAllViewController alloc] init];
     allVc.title = @"所有";
-    allVc.type = @(LTTopicItemTypeAll);
+//    allVc.type = @(LTTopicItemTypeAll);
     [self addChildViewController:allVc];
     
     LTVideoViewController *videoVc = [[LTVideoViewController alloc] init];
@@ -56,7 +55,7 @@
     
     LTPictureViewController *pictureVc = [[LTPictureViewController alloc] init];
     pictureVc.title = @"图片";
-    videoVc.type = @(LTTopicItemTypePicture);
+//    videoVc.type = @(LTTopicItemTypePicture);
     [self addChildViewController:pictureVc];
     
     LTTextViewController *textVc = [[LTTextViewController alloc] init];
@@ -64,6 +63,34 @@
 //    videoVc.type = @(LTTopicItemTypeText);
     [self addChildViewController:textVc];
 }
+
+//- (void)setupAllChildViewController{
+//    
+//    LTBaseTopicViewController *allVc = [[LTBaseTopicViewController alloc] init];
+//    allVc.title = @"所有";
+//    allVc.type = @(LTTopicItemTypeAll);
+//    [self addChildViewController:allVc];
+//    
+//    LTBaseTopicViewController *videoVc = [[LTBaseTopicViewController alloc] init];
+//    videoVc.title = @"视频";
+//    videoVc.type = @(LTTopicItemTypeVideo);
+//    [self addChildViewController:videoVc];
+//    
+//    LTBaseTopicViewController *voiceVc = [[LTBaseTopicViewController alloc] init];
+//    voiceVc.title = @"声音";
+//    videoVc.type = @(LTTopicItemTypeVoice);
+//    [self addChildViewController:voiceVc];
+//    
+//    LTBaseTopicViewController *pictureVc = [[LTBaseTopicViewController alloc] init];
+//    pictureVc.title = @"图片";
+//    videoVc.type = @(LTTopicItemTypePicture);
+//    [self addChildViewController:pictureVc];
+//    
+//    LTBaseTopicViewController *textVc = [[LTBaseTopicViewController alloc] init];
+//    textVc.title = @"段子";
+//    videoVc.type = @(LTTopicItemTypeText);
+//    [self addChildViewController:textVc];
+//}
 
 - (void)gameClick{
     LTLog(@"点击🎮游戏");

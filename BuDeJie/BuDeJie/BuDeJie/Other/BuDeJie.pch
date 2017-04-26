@@ -8,24 +8,33 @@
 
 #ifdef __OBJC__
 
+//全局类
 #import "UIBarButtonItem+LTItem.h"
 #import "UIView+LTFrame.h"
 #import "AFHTTPSessionManager+LTManager.h"
 #import "UITextField+LTPlaceholder.h"
 
-#define CachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+//缓存地址
+#define KCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+//基本URL
 #define KBaseURL @"http://api.budejie.com/api/api_open.php"
+
+//屏幕宽高
 #define KScreenH [UIScreen mainScreen].bounds.size.height
 #define KScreenW [UIScreen mainScreen].bounds.size.width
+
+//系统版本
 #define KSystemVersion [[UIDevice currentDevice].systemVersion floatValue]
+
+//自定义颜色
 #define LTColor(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
 
+//自定义LOG
 #ifdef DEBUG
-#define LTLog(...) NSLog(__VA_ARGS__)
+#define LTLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define LTLog(...)
 #endif
-
-
 
 #endif

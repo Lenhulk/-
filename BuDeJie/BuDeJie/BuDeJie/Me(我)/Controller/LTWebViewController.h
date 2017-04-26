@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LTWebViewController : UIViewController
+
 @property (nonatomic, strong) NSURL *url;
+
 @end

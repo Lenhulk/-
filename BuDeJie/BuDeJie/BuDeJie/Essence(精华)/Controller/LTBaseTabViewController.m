@@ -11,12 +11,19 @@
 
 @interface LTBaseTabViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
+/**自定义的TabView*/
 @property (nonatomic, weak) UIView *topTitleView;
+/**容器view*/
 @property (nonatomic, weak) UICollectionView *bottomCollectionView;
+/**选中的按钮type*/
 @property (nonatomic, weak) UIButton *selBtn;
+/**type按钮数组*/
 @property (nonatomic, strong) NSMutableArray *titleBtns;
+/**底部滑动的红线*/
 @property (nonatomic, weak) UIView *underLineView;
+
 @property (nonatomic, assign) BOOL isInitial;
+
 @end
 
 static NSString * const ID = @"CollectionCell";
@@ -134,7 +141,7 @@ static NSString * const ID = @"CollectionCell";
             [btn.titleLabel sizeToFit]; //必须先设置按钮的label宽度
             underLine.lh_width = btn.titleLabel.lh_width;
             underLine.lh_centerX = btn.lh_centerX;
-            underLine.lh_height = 1;
+            underLine.lh_height = 2;
             underLine.lh_y = self.topTitleView.lh_height - underLine.lh_height;
             [self.topTitleView addSubview:underLine];
         }
@@ -192,15 +199,15 @@ static NSString * const ID = @"CollectionCell";
     
     NSInteger i = btn.tag;
     
-    //判断重复点击
+    //判断是否重复点击了type按钮
     if (btn == _selBtn) {
         //获取当前控制器->刷新
         LTBaseTopicViewController *topicVc = self.childViewControllers[i];
-//        LTLog(@"%@重复点击了按钮", topicVc);
+        LTLog(@"%@重复点击了按钮", topicVc);
         [topicVc reload];
     }
     
-    //记录选择按钮
+    //记录选择的按钮
     [self selectedButton:btn];
     
     //点击按钮切换到对应的页面

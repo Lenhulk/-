@@ -35,6 +35,7 @@
 - (NSDateComponents *)detalFromNow{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     return [calendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:self toDate:[NSDate date] options:NSCalendarWrapComponents];
+    
 }
 
 @end

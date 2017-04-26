@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LTUserItem;
 @interface LTUserCell : UITableViewCell
-
+@property (nonatomic, strong) LTUserItem *user;
 @end

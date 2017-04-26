@@ -94,11 +94,11 @@
     [manager GET:@"http://mobads.baidu.com/cpro/ui/mads.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
 //        LTLog(@"%@", responseObject);
-        //可数据转plist方便对照解析
 //        [responseObject writeToFile:@"/Users/Lenhulk/Desktop/ad.plist" atomically:YES];
         
         //获取广告字典，转模型
         NSDictionary *adDict = [responseObject[@"ad"] firstObject];
+        if (adDict == nil) return;
         LTADItem *item = [LTADItem mj_objectWithKeyValues:adDict];
         _adItem = item;
         

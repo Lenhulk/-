@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (LTFetch)
-
+- (UITableView *)fetchTableView;
 @end

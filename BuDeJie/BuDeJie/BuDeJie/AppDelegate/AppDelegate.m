@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "LTTabBarController.h"
+//#import "LTTabBarController.h"
 #import "LTADViewController.h"
-
+#import "LTStatusWindow.h"
 
 
 @interface AppDelegate ()
@@ -30,6 +30,9 @@
     self.window.rootViewController = adVc;
     
     [self.window makeKeyAndVisible];
+    
+    //自己写的状态栏（回到顶部）
+//    [LTStatusWindow show];
     
     return YES;
 }

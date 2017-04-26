@@ -35,14 +35,18 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, strong) NSString *image0;     //主图
+//沙盒中的缓存图片
+@property (nonatomic, strong) UIImage *localImage;
 /*
- playcount videouri videotime cdn_img playcount voiceuri voicetime
+ 视频
  */
 @property (nonatomic, strong) NSString *videouri;
 @property (nonatomic, assign) NSInteger videotime;
 @property (nonatomic, strong) NSString *playcount;
 @property (nonatomic, strong) NSString *cdn_img;
-
+/*
+ 声音
+ */
 @property (nonatomic, strong) NSString *voiceuri;
 @property (nonatomic, assign) NSInteger voicelength;
 /*

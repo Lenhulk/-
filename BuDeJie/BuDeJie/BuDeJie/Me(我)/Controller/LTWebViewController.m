@@ -10,11 +10,17 @@
 #import <WebKit/WebKit.h>
 
 @interface LTWebViewController ()
+/**底部容器*/
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+/**返回按钮*/
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *backItem;
+/**前进按钮*/
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *forwardItem;
+/**刷新按钮*/
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshItem;
+/**进度条*/
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+/**网页View 展示网页内容*/
 @property (nonatomic, weak) WKWebView *webView;
 @end
 
@@ -27,7 +33,7 @@
     self.webView = webView;
     [self.containerView addSubview:webView];
     
-    //展示网页
+    //加载网页
     NSURLRequest *request = [NSURLRequest requestWithURL:_url];
     [webView loadRequest:request];
     
@@ -42,7 +48,7 @@
     [webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
 }
 
-// 只要监听属性有新值就会调用
+// KVO：只要监听属性有新值就会调用
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     
     self.backItem.enabled = _webView.canGoBack;
@@ -75,22 +81,5 @@
 - (IBAction)reload:(id)sender {
     [_webView reload];
 }
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LTPublishViewController : UIViewController
-
+@property (nonatomic, copy) void(^closeTask)();
 @end

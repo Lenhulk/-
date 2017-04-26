@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LTWebViewController">
@@ -25,15 +29,17 @@
                     <subviews>
                         <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KG5-3N-Nvc">
                             <rect key="frame" x="0.0" y="19" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Title" id="9Ba-zQ-dia"/>
                             </items>
                         </navigationBar>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Gr-jd-Le4">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <items>
                         <barButtonItem image="left" id="X9Y-AP-88b">
                             <connections>
@@ -58,11 +64,11 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="dSC-SK-PmE"/>
                     </constraints>
-                    <color key="progressTintColor" red="0.3925826691" green="1" blue="0.65382242759999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="trackTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="progressTintColor" red="0.3925826691" green="1" blue="0.65382242759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="trackTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </progressView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="gYL-N7-lP8" secondAttribute="trailing" id="4h6-ya-Tek"/>
                 <constraint firstAttribute="bottom" secondItem="gYL-N7-lP8" secondAttribute="bottom" id="CQJ-CL-x9B"/>
@@ -72,7 +78,7 @@
                 <constraint firstItem="gYL-N7-lP8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g4H-yV-Q3f"/>
                 <constraint firstItem="Ee2-r9-EXm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="igB-Is-RWf"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="71" y="-15"/>
         </view>
     </objects>
     <resources>

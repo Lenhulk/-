@@ -8,6 +8,8 @@
 
 #import "LTFriendTrendViewController.h"
 #import "LTLoginViewController.h"
+#import "LTRecommandViewController.h"
+
 @interface LTFriendTrendViewController ()
 @end
 
@@ -24,7 +26,8 @@
 }
 
 - (void)attentionClick{
-    LTLog(@"点击关注");
+    LTRecommandViewController *recommandVc = [[LTRecommandViewController alloc] init];
+    [self.navigationController pushViewController:recommandVc animated:YES];
 }
 
 - (IBAction)loginClick:(id)sender {
@@ -35,19 +38,7 @@
     [self presentViewController:loginVc animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

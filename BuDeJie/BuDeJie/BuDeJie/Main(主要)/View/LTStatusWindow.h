@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LTStatusWindow : UIWindow
-
++ (void)show;
 @end

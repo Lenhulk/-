@@ -11,15 +11,17 @@
 @implementation LTFileManager
 
 + (void)removeDirectoryPath:(NSString *)directoryPath{
+    
     NSFileManager *manager = [NSFileManager defaultManager];
     BOOL isDirectory = NO;
     BOOL isExists = [manager fileExistsAtPath:directoryPath isDirectory:&isDirectory];
+    
     if (!isDirectory || !isExists) {
-        //抛出异常
         NSException *excp = [NSException exceptionWithName:directoryPath reason:[NSString stringWithFormat:@"小笨蛋，\"%@\"路径不存在，或者不是一个文件夹路径", directoryPath] userInfo:nil];
         [excp raise];
     }
     
+    //模仿SDWebImage 先删除缓存文件夹在创建
     [[NSFileManager defaultManager] removeItemAtPath:directoryPath error:nil];
     [[NSFileManager defaultManager] createDirectoryAtPath:directoryPath withIntermediateDirectories:YES attributes:nil error:nil];
 }
@@ -29,15 +31,17 @@
     //开子线程处理计算，防止点击时当前页面卡顿
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
-        //容错处理
         //获取文件管理者
         NSFileManager *manager = [NSFileManager defaultManager];
         BOOL isDirectory = NO;
         BOOL isExists = [manager fileExistsAtPath:directoryPath isDirectory:&isDirectory];
+        
+        //容错处理
         if (!isDirectory || !isExists) {
             //抛出异常
             @throw [NSException exceptionWithName:directoryPath reason:[NSString stringWithFormat:@"小笨蛋，\"%@\"路径不存在，或者不是一个文件夹路径", directoryPath] userInfo:nil];
         }
+        
         //总大小
         NSUInteger totalSize = 0;
         //获取路径下的子文件夹
@@ -45,13 +49,16 @@
         //遍历
         for (NSString *fileName in subPaths) {
             NSString *fullPath = [directoryPath stringByAppendingPathComponent:fileName];
-            //隐藏文件不处理
+            
+            //后缀为系统的隐藏文件.DS不处理
             if ([fullPath containsString:@".DS"]) continue;
+            
             //判断是否是文件夹
             BOOL isDirectory = NO;
             BOOL isExists = [manager fileExistsAtPath:fullPath isDirectory:&isDirectory];
             if (isDirectory || !isExists) continue;
             
+            //获取到的文件夹的属性
             NSDictionary *attr = [manager attributesOfItemAtPath:fullPath error:nil];
             totalSize += [attr fileSize];
         }
