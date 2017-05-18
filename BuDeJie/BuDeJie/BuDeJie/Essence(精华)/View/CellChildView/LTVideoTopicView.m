@@ -40,10 +40,6 @@
     //1 获取元素
     NSString *videoUrlStr = self.item.videouri;
     
-    
-    
-    
-    
     NSURL *videoUrl = [NSURL URLWithString:videoUrlStr];
     
     //2 创建播放器

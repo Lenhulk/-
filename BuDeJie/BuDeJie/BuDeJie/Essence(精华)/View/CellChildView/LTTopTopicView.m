@@ -25,7 +25,7 @@
 }
 
 - (void)setItem:(LTTopicItem *)item{
-
+    
     _item = item;
     [_iconView sd_setImageWithURL:[NSURL URLWithString:item.profile_image]];
     _nameLabel.text = item.screen_name;

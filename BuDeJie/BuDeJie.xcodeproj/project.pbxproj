@@ -661,7 +661,6 @@
 			isa = PBXGroup;
 			children = (
 				E94E20641DB2573700E23BE0 /* Controller */,
-				E94E20651DB2573700E23BE0 /* Model */,
 				E94E20661DB2573700E23BE0 /* View */,
 			);
 			path = "Main(主要)";
@@ -676,13 +675,6 @@
 				E95EECAB1DB468A400B2A505 /* LTNavigationController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E94E20651DB2573700E23BE0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E94E20661DB2573700E23BE0 /* View */ = {

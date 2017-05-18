@@ -38,6 +38,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
 
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         // 设置顶部View内容，设置topView，设置Cell尺寸
         LTTopTopicView *topTopicView = [LTTopTopicView viewForXib];

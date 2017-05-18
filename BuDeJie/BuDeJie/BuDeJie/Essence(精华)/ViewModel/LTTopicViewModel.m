@@ -24,7 +24,7 @@
     CGFloat topW = KScreenW;
     CGFloat textY = 55;
     CGFloat textW = KScreenW - 2 * margin;
-    CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
+    CGFloat textH = [item.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
     CGFloat topH = textY + textH;
     
     _topViewFrame = CGRectMake(topX, topY, topW, topH);
